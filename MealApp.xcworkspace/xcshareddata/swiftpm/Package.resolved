@@ -11,12 +11,30 @@
         }
       },
       {
+        "package": "Nuke",
+        "repositoryURL": "https://github.com/kean/Nuke.git",
+        "state": {
+          "branch": null,
+          "revision": "a2a56211cd80614e1ac90bf2e76c5329f4f6b3d0",
+          "version": "9.1.2"
+        }
+      },
+      {
         "package": "Quick",
         "repositoryURL": "https://github.com/Quick/Quick.git",
         "state": {
           "branch": null,
           "revision": "0038bcbab4292f3b028632556507c124e5ba69f3",
           "version": "3.0.0"
+        }
+      },
+      {
+        "package": "RxNuke",
+        "repositoryURL": "https://github.com/kean/RxNuke.git",
+        "state": {
+          "branch": null,
+          "revision": "4c99559e11afa40c3246de75f9d2b6018203c47f",
+          "version": "1.0.1"
         }
       },
       {

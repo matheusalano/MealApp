@@ -16,6 +16,7 @@
 		17AE06492505A5AA006A53F6 /* MAFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AE06482505A5AA006A53F6 /* MAFilterView.swift */; };
 		17AE064B2505A5C7006A53F6 /* MAFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AE064A2505A5C7006A53F6 /* MAFilterViewController.swift */; };
 		17AE064D2505A5EA006A53F6 /* MAFilterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AE064C2505A5EA006A53F6 /* MAFilterCoordinator.swift */; };
+		17AE06502505AA3C006A53F6 /* RxNuke in Frameworks */ = {isa = PBXBuildFile; productRef = 17AE064F2505AA3C006A53F6 /* RxNuke */; };
 		17B3D0D225057FF5000DB66F /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 17B3D0D125057FF5000DB66F /* SnapKit */; };
 		17B3D0D52505807F000DB66F /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = 17B3D0D42505807F000DB66F /* Quick */; };
 		17B3D0D8250580B0000DB66F /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = 17B3D0D7250580B0000DB66F /* Nimble */; };
@@ -104,6 +105,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1735380425057FB200E529BA /* RxRelay in Frameworks */,
+				17AE06502505AA3C006A53F6 /* RxNuke in Frameworks */,
 				1735380025057FB200E529BA /* RxSwift in Frameworks */,
 				1735380625057FB200E529BA /* RxCocoa in Frameworks */,
 				B2867D979FA6E70293203BCA /* Pods_MealApp.framework in Frameworks */,
@@ -313,6 +315,7 @@
 				1735380325057FB200E529BA /* RxRelay */,
 				1735380525057FB200E529BA /* RxCocoa */,
 				17B3D0D125057FF5000DB66F /* SnapKit */,
+				17AE064F2505AA3C006A53F6 /* RxNuke */,
 			);
 			productName = MealApp;
 			productReference = 17C7558F25057B3D00D9AB36 /* MealApp.app */;
@@ -401,6 +404,7 @@
 				17B3D0D32505807F000DB66F /* XCRemoteSwiftPackageReference "Quick" */,
 				17B3D0D6250580B0000DB66F /* XCRemoteSwiftPackageReference "Nimble" */,
 				17B3D0D92505824E000DB66F /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
+				17AE064E2505AA3B006A53F6 /* XCRemoteSwiftPackageReference "RxNuke" */,
 			);
 			productRefGroup = 17C7559025057B3D00D9AB36 /* Products */;
 			projectDirPath = "";
@@ -910,6 +914,14 @@
 				minimumVersion = 5.1.1;
 			};
 		};
+		17AE064E2505AA3B006A53F6 /* XCRemoteSwiftPackageReference "RxNuke" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/RxNuke.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.1;
+			};
+		};
 		17B3D0D025057FF5000DB66F /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -969,6 +981,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 173537FE25057FB200E529BA /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxBlocking;
+		};
+		17AE064F2505AA3C006A53F6 /* RxNuke */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 17AE064E2505AA3B006A53F6 /* XCRemoteSwiftPackageReference "RxNuke" */;
+			productName = RxNuke;
 		};
 		17B3D0D125057FF5000DB66F /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
