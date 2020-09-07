@@ -5,8 +5,8 @@ import RxTest
 
 @testable import MealApp
 
-final class MACategoriesViewModelTests: QuickSpec {
-    private var sut: MACategoriesViewModel!
+final class MAFilterViewModelTests: QuickSpec {
+    private var sut: MAFilterViewModel!
     private var scheduler: TestScheduler!
     private var disposeBag: DisposeBag!
 
@@ -20,11 +20,11 @@ final class MACategoriesViewModelTests: QuickSpec {
         scheduler = TestScheduler(initialClock: 0)
         disposeBag = DisposeBag()
 
-        sut = MACategoriesViewModel()
+        sut = MAFilterViewModel()
     }
 
     private func start() {
-        describe("MACategoriesViewModel") {
+        describe("MAFilterViewModel") {
             when("when left bar button is pressed") {
                 beforeEach {
                     self.setup()
