@@ -12,6 +12,9 @@
 		1735380425057FB200E529BA /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 1735380325057FB200E529BA /* RxRelay */; };
 		1735380625057FB200E529BA /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 1735380525057FB200E529BA /* RxCocoa */; };
 		1735380825057FB200E529BA /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = 1735380725057FB200E529BA /* RxBlocking */; };
+		175C6B032506C6BD0041832D /* MACategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175C6B022506C6BD0041832D /* MACategoriesViewModel.swift */; };
+		175C6B082506CBDF0041832D /* MACategoriesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175C6B072506CBDF0041832D /* MACategoriesViewModelTests.swift */; };
+		175C6B0A2506CC260041832D /* QuickSpec+BDT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175C6B092506CC260041832D /* QuickSpec+BDT.swift */; };
 		17AE06462505A176006A53F6 /* AppService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AE06452505A176006A53F6 /* AppService.swift */; };
 		17AE06492505A5AA006A53F6 /* MAFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AE06482505A5AA006A53F6 /* MAFilterView.swift */; };
 		17AE064B2505A5C7006A53F6 /* MAFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AE064A2505A5C7006A53F6 /* MAFilterViewController.swift */; };
@@ -36,7 +39,6 @@
 		17C7559525057B3D00D9AB36 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C7559425057B3D00D9AB36 /* SceneDelegate.swift */; };
 		17C7559C25057B4200D9AB36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17C7559B25057B4200D9AB36 /* Assets.xcassets */; };
 		17C7559F25057B4200D9AB36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17C7559D25057B4200D9AB36 /* LaunchScreen.storyboard */; };
-		17C755AA25057B4200D9AB36 /* MealAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C755A925057B4200D9AB36 /* MealAppTests.swift */; };
 		17C755B525057B4200D9AB36 /* MealAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C755B425057B4200D9AB36 /* MealAppUITests.swift */; };
 		7116C6CC4119312FB05A8560 /* Pods_MealAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E18342CA51D225396CFE902F /* Pods_MealAppTests.framework */; };
 		A408B5877037B0C612919FAB /* Pods_MealApp_MealAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13D930F3EC491CBB431643DC /* Pods_MealApp_MealAppUITests.framework */; };
@@ -62,6 +64,9 @@
 
 /* Begin PBXFileReference section */
 		13D930F3EC491CBB431643DC /* Pods_MealApp_MealAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MealApp_MealAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		175C6B022506C6BD0041832D /* MACategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MACategoriesViewModel.swift; sourceTree = "<group>"; };
+		175C6B072506CBDF0041832D /* MACategoriesViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MACategoriesViewModelTests.swift; sourceTree = "<group>"; };
+		175C6B092506CC260041832D /* QuickSpec+BDT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuickSpec+BDT.swift"; sourceTree = "<group>"; };
 		17AE06452505A176006A53F6 /* AppService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppService.swift; sourceTree = "<group>"; };
 		17AE06482505A5AA006A53F6 /* MAFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAFilterView.swift; sourceTree = "<group>"; };
 		17AE064A2505A5C7006A53F6 /* MAFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAFilterViewController.swift; sourceTree = "<group>"; };
@@ -84,7 +89,6 @@
 		17C7559E25057B4200D9AB36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		17C755A025057B4200D9AB36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17C755A525057B4200D9AB36 /* MealAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MealAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		17C755A925057B4200D9AB36 /* MealAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealAppTests.swift; sourceTree = "<group>"; };
 		17C755AB25057B4200D9AB36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17C755B025057B4200D9AB36 /* MealAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MealAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		17C755B425057B4200D9AB36 /* MealAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealAppUITests.swift; sourceTree = "<group>"; };
@@ -145,6 +149,30 @@
 				E18342CA51D225396CFE902F /* Pods_MealAppTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		175C6B042506CBB30041832D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				175C6B092506CC260041832D /* QuickSpec+BDT.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		175C6B052506CBBA0041832D /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				175C6B062506CBBE0041832D /* Categories */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		175C6B062506CBBE0041832D /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				175C6B072506CBDF0041832D /* MACategoriesViewModelTests.swift */,
+			);
+			path = Categories;
 			sourceTree = "<group>";
 		};
 		17AE06472505A595006A53F6 /* Filter */ = {
@@ -215,6 +243,7 @@
 				17B3D0F32505879D000DB66F /* MACategoriesCoordinator.swift */,
 				17B3D0F725058BC7000DB66F /* MACategoriesView.swift */,
 				17B3D0F925058BF4000DB66F /* MACategoriesViewController.swift */,
+				175C6B022506C6BD0041832D /* MACategoriesViewModel.swift */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -263,7 +292,8 @@
 		17C755A825057B4200D9AB36 /* MealAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				17C755A925057B4200D9AB36 /* MealAppTests.swift */,
+				175C6B052506CBBA0041832D /* Scenes */,
+				175C6B042506CBB30041832D /* Extensions */,
 				17C755AB25057B4200D9AB36 /* Info.plist */,
 			);
 			path = MealAppTests;
@@ -381,6 +411,7 @@
 					};
 					17C755A425057B4200D9AB36 = {
 						CreatedOnToolsVersion = 11.5;
+						LastSwiftMigration = 1150;
 						TestTargetID = 17C7558E25057B3D00D9AB36;
 					};
 					17C755AF25057B4200D9AB36 = {
@@ -561,6 +592,7 @@
 				17B3D0F42505879D000DB66F /* MACategoriesCoordinator.swift in Sources */,
 				17B3D0F025058723000DB66F /* BaseCoordinator.swift in Sources */,
 				17AE06462505A176006A53F6 /* AppService.swift in Sources */,
+				175C6B032506C6BD0041832D /* MACategoriesViewModel.swift in Sources */,
 				17B3D0EB25058628000DB66F /* MANavigationController.swift in Sources */,
 				17B3D0EE25058664000DB66F /* AppNavigator.swift in Sources */,
 				17C7559325057B3D00D9AB36 /* AppDelegate.swift in Sources */,
@@ -577,7 +609,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17C755AA25057B4200D9AB36 /* MealAppTests.swift in Sources */,
+				175C6B082506CBDF0041832D /* MACategoriesViewModelTests.swift in Sources */,
+				175C6B0A2506CC260041832D /* QuickSpec+BDT.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -782,6 +815,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S267HCZ2HP;
 				INFOPLIST_FILE = MealAppTests/Info.plist;
@@ -793,6 +827,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.matheusalano.MealAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MealApp.app/MealApp";
@@ -805,6 +840,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S267HCZ2HP;
 				INFOPLIST_FILE = MealAppTests/Info.plist;
