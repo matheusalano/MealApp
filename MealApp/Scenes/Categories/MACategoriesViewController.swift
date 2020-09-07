@@ -10,6 +10,9 @@ final class MACategoriesViewController: BaseViewController<MACategoriesView> {
     init(viewModel: MACategoriesViewModelProtocol) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
+
+        setupNavigationBar()
+        setupTabBar()
     }
 
     @available(*, unavailable)
@@ -21,9 +24,6 @@ final class MACategoriesViewController: BaseViewController<MACategoriesView> {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        setupNavigationBar()
-        setupTabBar()
 
         setupBindings()
     }
