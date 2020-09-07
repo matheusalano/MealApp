@@ -3,27 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1735380025057FB200E529BA /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 173537FF25057FB200E529BA /* RxSwift */; };
-		1735380225057FB200E529BA /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = 1735380125057FB200E529BA /* RxTest */; };
-		1735380425057FB200E529BA /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 1735380325057FB200E529BA /* RxRelay */; };
-		1735380625057FB200E529BA /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 1735380525057FB200E529BA /* RxCocoa */; };
-		1735380825057FB200E529BA /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = 1735380725057FB200E529BA /* RxBlocking */; };
 		175C6B032506C6BD0041832D /* MACategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175C6B022506C6BD0041832D /* MACategoriesViewModel.swift */; };
 		175C6B082506CBDF0041832D /* MACategoriesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175C6B072506CBDF0041832D /* MACategoriesViewModelTests.swift */; };
 		175C6B0A2506CC260041832D /* QuickSpec+BDT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175C6B092506CC260041832D /* QuickSpec+BDT.swift */; };
+		179664E22506F36700CFA3E9 /* MAFilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179664E12506F36700CFA3E9 /* MAFilterViewModel.swift */; };
 		17AE06462505A176006A53F6 /* AppService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AE06452505A176006A53F6 /* AppService.swift */; };
 		17AE06492505A5AA006A53F6 /* MAFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AE06482505A5AA006A53F6 /* MAFilterView.swift */; };
 		17AE064B2505A5C7006A53F6 /* MAFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AE064A2505A5C7006A53F6 /* MAFilterViewController.swift */; };
 		17AE064D2505A5EA006A53F6 /* MAFilterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AE064C2505A5EA006A53F6 /* MAFilterCoordinator.swift */; };
-		17AE06502505AA3C006A53F6 /* RxNuke in Frameworks */ = {isa = PBXBuildFile; productRef = 17AE064F2505AA3C006A53F6 /* RxNuke */; };
-		17B3D0D225057FF5000DB66F /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 17B3D0D125057FF5000DB66F /* SnapKit */; };
-		17B3D0D52505807F000DB66F /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = 17B3D0D42505807F000DB66F /* Quick */; };
-		17B3D0D8250580B0000DB66F /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = 17B3D0D7250580B0000DB66F /* Nimble */; };
-		17B3D0DB2505824E000DB66F /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 17B3D0DA2505824E000DB66F /* SnapshotTesting */; };
 		17B3D0E52505852C000DB66F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 17B3D0E72505852C000DB66F /* Localizable.strings */; };
 		17B3D0EB25058628000DB66F /* MANavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B3D0EA25058628000DB66F /* MANavigationController.swift */; };
 		17B3D0EE25058664000DB66F /* AppNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B3D0ED25058664000DB66F /* AppNavigator.swift */; };
@@ -67,6 +58,7 @@
 		175C6B022506C6BD0041832D /* MACategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MACategoriesViewModel.swift; sourceTree = "<group>"; };
 		175C6B072506CBDF0041832D /* MACategoriesViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MACategoriesViewModelTests.swift; sourceTree = "<group>"; };
 		175C6B092506CC260041832D /* QuickSpec+BDT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuickSpec+BDT.swift"; sourceTree = "<group>"; };
+		179664E12506F36700CFA3E9 /* MAFilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAFilterViewModel.swift; sourceTree = "<group>"; };
 		17AE06452505A176006A53F6 /* AppService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppService.swift; sourceTree = "<group>"; };
 		17AE06482505A5AA006A53F6 /* MAFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAFilterView.swift; sourceTree = "<group>"; };
 		17AE064A2505A5C7006A53F6 /* MAFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAFilterViewController.swift; sourceTree = "<group>"; };
@@ -108,12 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1735380425057FB200E529BA /* RxRelay in Frameworks */,
-				17AE06502505AA3C006A53F6 /* RxNuke in Frameworks */,
-				1735380025057FB200E529BA /* RxSwift in Frameworks */,
-				1735380625057FB200E529BA /* RxCocoa in Frameworks */,
 				B2867D979FA6E70293203BCA /* Pods_MealApp.framework in Frameworks */,
-				17B3D0D225057FF5000DB66F /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,11 +108,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17B3D0D8250580B0000DB66F /* Nimble in Frameworks */,
-				1735380225057FB200E529BA /* RxTest in Frameworks */,
-				1735380825057FB200E529BA /* RxBlocking in Frameworks */,
-				17B3D0DB2505824E000DB66F /* SnapshotTesting in Frameworks */,
-				17B3D0D52505807F000DB66F /* Quick in Frameworks */,
 				7116C6CC4119312FB05A8560 /* Pods_MealAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -181,6 +163,7 @@
 				17AE064C2505A5EA006A53F6 /* MAFilterCoordinator.swift */,
 				17AE06482505A5AA006A53F6 /* MAFilterView.swift */,
 				17AE064A2505A5C7006A53F6 /* MAFilterViewController.swift */,
+				179664E12506F36700CFA3E9 /* MAFilterViewModel.swift */,
 			);
 			path = Filter;
 			sourceTree = "<group>";
@@ -334,19 +317,13 @@
 				17C7558C25057B3D00D9AB36 /* Frameworks */,
 				17C7558D25057B3D00D9AB36 /* Resources */,
 				173537FD25057DA300E529BA /* SwiftLint */,
+				3646C87F9955F5672DEBB112 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = MealApp;
-			packageProductDependencies = (
-				173537FF25057FB200E529BA /* RxSwift */,
-				1735380325057FB200E529BA /* RxRelay */,
-				1735380525057FB200E529BA /* RxCocoa */,
-				17B3D0D125057FF5000DB66F /* SnapKit */,
-				17AE064F2505AA3C006A53F6 /* RxNuke */,
-			);
 			productName = MealApp;
 			productReference = 17C7558F25057B3D00D9AB36 /* MealApp.app */;
 			productType = "com.apple.product-type.application";
@@ -359,6 +336,7 @@
 				17C755A125057B4200D9AB36 /* Sources */,
 				17C755A225057B4200D9AB36 /* Frameworks */,
 				17C755A325057B4200D9AB36 /* Resources */,
+				ED3C1271FA311DE18608EF71 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -366,13 +344,6 @@
 				17C755A725057B4200D9AB36 /* PBXTargetDependency */,
 			);
 			name = MealAppTests;
-			packageProductDependencies = (
-				1735380125057FB200E529BA /* RxTest */,
-				1735380725057FB200E529BA /* RxBlocking */,
-				17B3D0D42505807F000DB66F /* Quick */,
-				17B3D0D7250580B0000DB66F /* Nimble */,
-				17B3D0DA2505824E000DB66F /* SnapshotTesting */,
-			);
 			productName = MealAppTests;
 			productReference = 17C755A525057B4200D9AB36 /* MealAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -385,6 +356,7 @@
 				17C755AC25057B4200D9AB36 /* Sources */,
 				17C755AD25057B4200D9AB36 /* Frameworks */,
 				17C755AE25057B4200D9AB36 /* Resources */,
+				3C68ED9D2F1859567FCED34D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -429,14 +401,6 @@
 				Base,
 			);
 			mainGroup = 17C7558625057B3D00D9AB36;
-			packageReferences = (
-				173537FE25057FB200E529BA /* XCRemoteSwiftPackageReference "RxSwift" */,
-				17B3D0D025057FF5000DB66F /* XCRemoteSwiftPackageReference "SnapKit" */,
-				17B3D0D32505807F000DB66F /* XCRemoteSwiftPackageReference "Quick" */,
-				17B3D0D6250580B0000DB66F /* XCRemoteSwiftPackageReference "Nimble" */,
-				17B3D0D92505824E000DB66F /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
-				17AE064E2505AA3B006A53F6 /* XCRemoteSwiftPackageReference "RxNuke" */,
-			);
 			productRefGroup = 17C7559025057B3D00D9AB36 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -534,6 +498,40 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		3646C87F9955F5672DEBB112 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MealApp/Pods-MealApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MealApp/Pods-MealApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MealApp/Pods-MealApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3C68ED9D2F1859567FCED34D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MealApp-MealAppUITests/Pods-MealApp-MealAppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MealApp-MealAppUITests/Pods-MealApp-MealAppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MealApp-MealAppUITests/Pods-MealApp-MealAppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		5A8D8855B42B3B4CE8810785 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -578,6 +576,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		ED3C1271FA311DE18608EF71 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MealAppTests/Pods-MealAppTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MealAppTests/Pods-MealAppTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MealAppTests/Pods-MealAppTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -595,6 +610,7 @@
 				175C6B032506C6BD0041832D /* MACategoriesViewModel.swift in Sources */,
 				17B3D0EB25058628000DB66F /* MANavigationController.swift in Sources */,
 				17B3D0EE25058664000DB66F /* AppNavigator.swift in Sources */,
+				179664E22506F36700CFA3E9 /* MAFilterViewModel.swift in Sources */,
 				17C7559325057B3D00D9AB36 /* AppDelegate.swift in Sources */,
 				17B3D0F6250587B4000DB66F /* BaseViewController.swift in Sources */,
 				17C7559525057B3D00D9AB36 /* SceneDelegate.swift in Sources */,
@@ -940,110 +956,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		173537FE25057FB200E529BA /* XCRemoteSwiftPackageReference "RxSwift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.1.1;
-			};
-		};
-		17AE064E2505AA3B006A53F6 /* XCRemoteSwiftPackageReference "RxNuke" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/kean/RxNuke.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.1;
-			};
-		};
-		17B3D0D025057FF5000DB66F /* XCRemoteSwiftPackageReference "SnapKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.1;
-			};
-		};
-		17B3D0D32505807F000DB66F /* XCRemoteSwiftPackageReference "Quick" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Quick/Quick.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 3.0.0;
-			};
-		};
-		17B3D0D6250580B0000DB66F /* XCRemoteSwiftPackageReference "Nimble" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Quick/Nimble.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 8.1.2;
-			};
-		};
-		17B3D0D92505824E000DB66F /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/pointfreeco/swift-snapshot-testing.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.8.2;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		173537FF25057FB200E529BA /* RxSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 173537FE25057FB200E529BA /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxSwift;
-		};
-		1735380125057FB200E529BA /* RxTest */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 173537FE25057FB200E529BA /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxTest;
-		};
-		1735380325057FB200E529BA /* RxRelay */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 173537FE25057FB200E529BA /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxRelay;
-		};
-		1735380525057FB200E529BA /* RxCocoa */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 173537FE25057FB200E529BA /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxCocoa;
-		};
-		1735380725057FB200E529BA /* RxBlocking */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 173537FE25057FB200E529BA /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxBlocking;
-		};
-		17AE064F2505AA3C006A53F6 /* RxNuke */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 17AE064E2505AA3B006A53F6 /* XCRemoteSwiftPackageReference "RxNuke" */;
-			productName = RxNuke;
-		};
-		17B3D0D125057FF5000DB66F /* SnapKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 17B3D0D025057FF5000DB66F /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = SnapKit;
-		};
-		17B3D0D42505807F000DB66F /* Quick */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 17B3D0D32505807F000DB66F /* XCRemoteSwiftPackageReference "Quick" */;
-			productName = Quick;
-		};
-		17B3D0D7250580B0000DB66F /* Nimble */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 17B3D0D6250580B0000DB66F /* XCRemoteSwiftPackageReference "Nimble" */;
-			productName = Nimble;
-		};
-		17B3D0DA2505824E000DB66F /* SnapshotTesting */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 17B3D0D92505824E000DB66F /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
-			productName = SnapshotTesting;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 17C7558725057B3D00D9AB36 /* Project object */;
 }
