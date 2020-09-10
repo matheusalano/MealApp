@@ -1,24 +1,26 @@
 import Foundation
 import RxSwift
 
-enum HTTPMethod: String {
+enum HTTPMethod: String, Equatable {
     case GET, POST, PUT, DELETE
 }
 
-enum ServiceError: Error {
+enum ServiceError: Error, Equatable {
+    case generic
     case cannotParse
     case invalidURL
 }
 
-enum APIPaths: String {
+enum APIPaths: String, Equatable {
     case search = "search.php"
+    case categories = "categories.php"
 }
 
 protocol AppServiceProtocol {
-    func request<T: Decodable>(path: APIPaths, method: HTTPMethod, queryItems: [URLQueryItem]?) -> Single<T>
+    func request<T: Decodable>(path: APIPaths, method: HTTPMethod, queryItems: [URLQueryItem]?, body: [String: Any]?) -> Single<T>
 }
 
-class AppService: AppServiceProtocol {
+final class AppService: AppServiceProtocol {
     private let baseUrl = "https://www.themealdb.com/api/json/v1/"
     private let apiKey = "1"
     private let session: URLSession
@@ -27,7 +29,7 @@ class AppService: AppServiceProtocol {
         self.session = session
     }
 
-    func request<T: Decodable>(path: APIPaths, method: HTTPMethod, queryItems: [URLQueryItem]?) -> Single<T> {
+    func request<T: Decodable>(path: APIPaths, method: HTTPMethod, queryItems: [URLQueryItem]?, body: [String: Any]?) -> Single<T> {
         let stringURL = baseUrl + apiKey + "/\(path.rawValue)"
 
         guard var urlComponents = URLComponents(string: stringURL) else { return Single.error(ServiceError.invalidURL) }
@@ -39,6 +41,7 @@ class AppService: AppServiceProtocol {
         var urlRequest = URLRequest(url: url)
 
         urlRequest.httpMethod = method.rawValue
+        urlRequest.httpBody = try? JSONSerialization.data(withJSONObject: body as Any, options: .prettyPrinted)
 
         return session.rx
             .json(request: urlRequest)

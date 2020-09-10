@@ -12,6 +12,11 @@
 		175C6B082506CBDF0041832D /* MACategoriesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175C6B072506CBDF0041832D /* MACategoriesViewModelTests.swift */; };
 		175C6B0A2506CC260041832D /* QuickSpec+BDT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175C6B092506CC260041832D /* QuickSpec+BDT.swift */; };
 		179664E22506F36700CFA3E9 /* MAFilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179664E12506F36700CFA3E9 /* MAFilterViewModel.swift */; };
+		17A48AAD2509B15900FB16D0 /* MACategoriesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A48AAC2509B15900FB16D0 /* MACategoriesService.swift */; };
+		17A48AB02509B25100FB16D0 /* MACategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A48AAF2509B25100FB16D0 /* MACategoryModel.swift */; };
+		17A48AB32509B5FB00FB16D0 /* MACategoryDummies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A48AB22509B5FB00FB16D0 /* MACategoryDummies.swift */; };
+		17A48AB52509B67D00FB16D0 /* MACategoriesServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A48AB42509B67D00FB16D0 /* MACategoriesServiceTests.swift */; };
+		17A48AB82509BA1E00FB16D0 /* AppServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A48AB72509BA1E00FB16D0 /* AppServiceMock.swift */; };
 		17AE06462505A176006A53F6 /* AppService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AE06452505A176006A53F6 /* AppService.swift */; };
 		17AE06492505A5AA006A53F6 /* MAFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AE06482505A5AA006A53F6 /* MAFilterView.swift */; };
 		17AE064B2505A5C7006A53F6 /* MAFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AE064A2505A5C7006A53F6 /* MAFilterViewController.swift */; };
@@ -31,6 +36,7 @@
 		17C7559525057B3D00D9AB36 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C7559425057B3D00D9AB36 /* SceneDelegate.swift */; };
 		17C7559C25057B4200D9AB36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17C7559B25057B4200D9AB36 /* Assets.xcassets */; };
 		17C7559F25057B4200D9AB36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17C7559D25057B4200D9AB36 /* LaunchScreen.storyboard */; };
+		17F0E6AA2509C1E000655B6A /* MealAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F0E6A92509C1E000655B6A /* MealAppUITests.swift */; };
 		7116C6CC4119312FB05A8560 /* Pods_MealAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E18342CA51D225396CFE902F /* Pods_MealAppTests.framework */; };
 		A408B5877037B0C612919FAB /* Pods_MealApp_MealAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13D930F3EC491CBB431643DC /* Pods_MealApp_MealAppUITests.framework */; };
 		B2867D979FA6E70293203BCA /* Pods_MealApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 441135B8DAF37CEBA51A7E76 /* Pods_MealApp.framework */; };
@@ -60,6 +66,11 @@
 		175C6B072506CBDF0041832D /* MACategoriesViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MACategoriesViewModelTests.swift; sourceTree = "<group>"; };
 		175C6B092506CC260041832D /* QuickSpec+BDT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuickSpec+BDT.swift"; sourceTree = "<group>"; };
 		179664E12506F36700CFA3E9 /* MAFilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAFilterViewModel.swift; sourceTree = "<group>"; };
+		17A48AAC2509B15900FB16D0 /* MACategoriesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MACategoriesService.swift; sourceTree = "<group>"; };
+		17A48AAF2509B25100FB16D0 /* MACategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MACategoryModel.swift; sourceTree = "<group>"; };
+		17A48AB22509B5FB00FB16D0 /* MACategoryDummies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MACategoryDummies.swift; sourceTree = "<group>"; };
+		17A48AB42509B67D00FB16D0 /* MACategoriesServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MACategoriesServiceTests.swift; sourceTree = "<group>"; };
+		17A48AB72509BA1E00FB16D0 /* AppServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppServiceMock.swift; sourceTree = "<group>"; };
 		17AE06452505A176006A53F6 /* AppService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppService.swift; sourceTree = "<group>"; };
 		17AE06482505A5AA006A53F6 /* MAFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAFilterView.swift; sourceTree = "<group>"; };
 		17AE064A2505A5C7006A53F6 /* MAFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAFilterViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +96,7 @@
 		17C755AB25057B4200D9AB36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17C755B025057B4200D9AB36 /* MealAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MealAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		17C755B625057B4200D9AB36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17F0E6A92509C1E000655B6A /* MealAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealAppUITests.swift; sourceTree = "<group>"; };
 		3A15CDF2F838086347CCAA09 /* Pods-MealAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MealAppTests.debug.xcconfig"; path = "Target Support Files/Pods-MealAppTests/Pods-MealAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		42E5F5C0DF6D1CFB3D0BCE22 /* Pods-MealApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MealApp.release.xcconfig"; path = "Target Support Files/Pods-MealApp/Pods-MealApp.release.xcconfig"; sourceTree = "<group>"; };
 		441135B8DAF37CEBA51A7E76 /* Pods_MealApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MealApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -162,8 +174,33 @@
 			isa = PBXGroup;
 			children = (
 				175C6B072506CBDF0041832D /* MACategoriesViewModelTests.swift */,
+				17A48AB42509B67D00FB16D0 /* MACategoriesServiceTests.swift */,
 			);
 			path = Categories;
+			sourceTree = "<group>";
+		};
+		17A48AAE2509B24700FB16D0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				17A48AAF2509B25100FB16D0 /* MACategoryModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		17A48AB12509B5B000FB16D0 /* Dummies */ = {
+			isa = PBXGroup;
+			children = (
+				17A48AB22509B5FB00FB16D0 /* MACategoryDummies.swift */,
+			);
+			path = Dummies;
+			sourceTree = "<group>";
+		};
+		17A48AB62509B9F900FB16D0 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				17A48AB72509BA1E00FB16D0 /* AppServiceMock.swift */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 		17AE06472505A595006A53F6 /* Filter */ = {
@@ -236,6 +273,7 @@
 				17B3D0F725058BC7000DB66F /* MACategoriesView.swift */,
 				17B3D0F925058BF4000DB66F /* MACategoriesViewController.swift */,
 				175C6B022506C6BD0041832D /* MACategoriesViewModel.swift */,
+				17A48AAC2509B15900FB16D0 /* MACategoriesService.swift */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -273,6 +311,7 @@
 		17C7559125057B3D00D9AB36 /* MealApp */ = {
 			isa = PBXGroup;
 			children = (
+				17A48AAE2509B24700FB16D0 /* Models */,
 				17B3D0E12505844A000DB66F /* App */,
 				17B3D0E825058614000DB66F /* General */,
 				17B3D0E22505847B000DB66F /* Resources */,
@@ -284,6 +323,8 @@
 		17C755A825057B4200D9AB36 /* MealAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				17A48AB62509B9F900FB16D0 /* Core */,
+				17A48AB12509B5B000FB16D0 /* Dummies */,
 				175C6B052506CBBA0041832D /* Scenes */,
 				175C6B042506CBB30041832D /* Extensions */,
 				17C755AB25057B4200D9AB36 /* Info.plist */,
@@ -295,6 +336,7 @@
 			isa = PBXGroup;
 			children = (
 				17C755B625057B4200D9AB36 /* Info.plist */,
+				17F0E6A92509C1E000655B6A /* MealAppUITests.swift */,
 			);
 			path = MealAppUITests;
 			sourceTree = "<group>";
@@ -396,6 +438,7 @@
 					};
 					17C755AF25057B4200D9AB36 = {
 						CreatedOnToolsVersion = 11.5;
+						LastSwiftMigration = 1170;
 						TestTargetID = 17C7558E25057B3D00D9AB36;
 					};
 				};
@@ -623,7 +666,9 @@
 				17B3D0F6250587B4000DB66F /* BaseViewController.swift in Sources */,
 				17C7559525057B3D00D9AB36 /* SceneDelegate.swift in Sources */,
 				17AE064D2505A5EA006A53F6 /* MAFilterCoordinator.swift in Sources */,
+				17A48AAD2509B15900FB16D0 /* MACategoriesService.swift in Sources */,
 				17AE064B2505A5C7006A53F6 /* MAFilterViewController.swift in Sources */,
+				17A48AB02509B25100FB16D0 /* MACategoryModel.swift in Sources */,
 				17B3D0FF25059127000DB66F /* String+Localized.swift in Sources */,
 				17B3D0FA25058BF4000DB66F /* MACategoriesViewController.swift in Sources */,
 			);
@@ -633,9 +678,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17A48AB52509B67D00FB16D0 /* MACategoriesServiceTests.swift in Sources */,
 				175C6B082506CBDF0041832D /* MACategoriesViewModelTests.swift in Sources */,
 				1720BBE52506FEBC00C332CE /* MAFilterViewModelTests.swift in Sources */,
+				17A48AB32509B5FB00FB16D0 /* MACategoryDummies.swift in Sources */,
 				175C6B0A2506CC260041832D /* QuickSpec+BDT.swift in Sources */,
+				17A48AB82509BA1E00FB16D0 /* AppServiceMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -643,6 +691,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17F0E6AA2509C1E000655B6A /* MealAppUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -887,6 +936,7 @@
 			baseConfigurationReference = 690359AD27F6DB4E88658ED9 /* Pods-MealApp-MealAppUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S267HCZ2HP;
 				INFOPLIST_FILE = MealAppUITests/Info.plist;
@@ -897,6 +947,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.matheusalano.MealAppUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = MealApp;
@@ -908,6 +959,7 @@
 			baseConfigurationReference = BF40E031324F9E87CCB30478 /* Pods-MealApp-MealAppUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S267HCZ2HP;
 				INFOPLIST_FILE = MealAppUITests/Info.plist;
