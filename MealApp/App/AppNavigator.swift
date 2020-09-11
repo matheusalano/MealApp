@@ -1,6 +1,6 @@
 import UIKit
 
-enum NavigationMethod {
+enum NavigationMethod: Equatable {
     case push, present
 }
 
@@ -9,7 +9,7 @@ protocol AppNavigatorProtocol {
     func navigate(to viewController: UIViewController, using method: NavigationMethod)
 }
 
-final class AppNavigator: AppNavigatorProtocol {
+class AppNavigator: AppNavigatorProtocol {
     private weak var tabBarController: UITabBarController?
     private var navigationControllers: [[UINavigationController]]
 
