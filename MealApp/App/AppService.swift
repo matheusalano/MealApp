@@ -1,14 +1,9 @@
 import Foundation
 import RxSwift
+import SystemConfiguration
 
 enum HTTPMethod: String, Equatable {
     case GET, POST, PUT, DELETE
-}
-
-enum ServiceError: Error, Equatable {
-    case generic
-    case cannotParse
-    case invalidURL
 }
 
 enum APIPaths: String, Equatable {
@@ -30,6 +25,8 @@ final class AppService: AppServiceProtocol {
     }
 
     func request<T: Decodable>(path: APIPaths, method: HTTPMethod, queryItems: [URLQueryItem]?, body: [String: Any]?) -> Single<T> {
+        guard isNetworkAvailable else { return Single.error(ServiceError.noConnection) }
+
         let stringURL = baseUrl + apiKey + "/\(path.rawValue)"
 
         guard var urlComponents = URLComponents(string: stringURL) else { return Single.error(ServiceError.invalidURL) }
@@ -41,7 +38,10 @@ final class AppService: AppServiceProtocol {
         var urlRequest = URLRequest(url: url)
 
         urlRequest.httpMethod = method.rawValue
-        urlRequest.httpBody = try? JSONSerialization.data(withJSONObject: body as Any, options: .prettyPrinted)
+
+        if let body = body {
+            urlRequest.httpBody = try? JSONSerialization.data(withJSONObject: body as Any, options: .prettyPrinted)
+        }
 
         return session.rx
             .json(request: urlRequest)
@@ -57,5 +57,47 @@ final class AppService: AppServiceProtocol {
                     return .error(ServiceError.cannotParse)
                 }
             })
+    }
+}
+
+//MARK: NetworkReachability
+
+extension AppService {
+    var isNetworkAvailable: Bool {
+        var zeroAddress = sockaddr_in()
+        zeroAddress.sin_len = UInt8(MemoryLayout.size(ofValue: zeroAddress))
+        zeroAddress.sin_family = sa_family_t(AF_INET)
+
+        let defaultRouteReachability = withUnsafePointer(to: &zeroAddress) {
+            $0.withMemoryRebound(to: sockaddr.self, capacity: 1) { zeroSockAddress in
+
+                SCNetworkReachabilityCreateWithAddress(nil, zeroSockAddress)
+            }
+        }
+
+        var flags = SCNetworkReachabilityFlags()
+        // swiftlint:disable:next force_unwrapping
+        guard SCNetworkReachabilityGetFlags(defaultRouteReachability!, &flags) else { return false }
+        let isReachable = (flags.rawValue & UInt32(kSCNetworkFlagsReachable)) != 0
+        let needsConnection = (flags.rawValue & UInt32(kSCNetworkFlagsConnectionRequired)) != 0
+        return (isReachable && !needsConnection)
+    }
+}
+
+//MARK: Service Errors
+
+enum ServiceError: Error, Equatable {
+    case generic
+    case cannotParse
+    case invalidURL
+    case noConnection
+
+    var readableMessage: String {
+        switch self {
+        case .noConnection:
+            return .localized(by: MAString.Errors.noConnection)
+        default:
+            return .localized(by: MAString.Errors.generic)
+        }
     }
 }

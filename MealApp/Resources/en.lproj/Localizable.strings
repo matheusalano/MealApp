@@ -1,2 +1,4 @@
 "scenes_categories_title" = "Categories";
 "scenes_filter_title" = "Filter";
+"errors_generic" = "Oops! Something went wrong!";
+"errors_no_connection" = "The Internet connection appears to be offline.";

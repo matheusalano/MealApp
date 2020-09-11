@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1720BBE52506FEBC00C332CE /* MAFilterViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1720BBE42506FEBC00C332CE /* MAFilterViewModelTests.swift */; };
+		1738091E250B0B0500A2242E /* UIViewController+Reactive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1738091D250B0B0500A2242E /* UIViewController+Reactive.swift */; };
+		17380920250B0F3100A2242E /* AuxiliarEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1738091F250B0F3100A2242E /* AuxiliarEnums.swift */; };
 		175C6B032506C6BD0041832D /* MACategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175C6B022506C6BD0041832D /* MACategoriesViewModel.swift */; };
 		175C6B082506CBDF0041832D /* MACategoriesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175C6B072506CBDF0041832D /* MACategoriesViewModelTests.swift */; };
 		175C6B0A2506CC260041832D /* QuickSpec+BDT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175C6B092506CC260041832D /* QuickSpec+BDT.swift */; };
@@ -62,6 +64,8 @@
 /* Begin PBXFileReference section */
 		13D930F3EC491CBB431643DC /* Pods_MealApp_MealAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MealApp_MealAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1720BBE42506FEBC00C332CE /* MAFilterViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAFilterViewModelTests.swift; sourceTree = "<group>"; };
+		1738091D250B0B0500A2242E /* UIViewController+Reactive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Reactive.swift"; sourceTree = "<group>"; };
+		1738091F250B0F3100A2242E /* AuxiliarEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuxiliarEnums.swift; sourceTree = "<group>"; };
 		175C6B022506C6BD0041832D /* MACategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MACategoriesViewModel.swift; sourceTree = "<group>"; };
 		175C6B072506CBDF0041832D /* MACategoriesViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MACategoriesViewModelTests.swift; sourceTree = "<group>"; };
 		175C6B092506CC260041832D /* QuickSpec+BDT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuickSpec+BDT.swift"; sourceTree = "<group>"; };
@@ -199,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				17A48AB72509BA1E00FB16D0 /* AppServiceMock.swift */,
+				1738091F250B0F3100A2242E /* AuxiliarEnums.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -282,6 +287,7 @@
 			isa = PBXGroup;
 			children = (
 				17B3D0FE25059127000DB66F /* String+Localized.swift */,
+				1738091D250B0B0500A2242E /* UIViewController+Reactive.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -651,6 +657,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1738091E250B0B0500A2242E /* UIViewController+Reactive.swift in Sources */,
 				17AE06492505A5AA006A53F6 /* MAFilterView.swift in Sources */,
 				17B3D10125059A6B000DB66F /* AppCoordinator.swift in Sources */,
 				17B3D0FC25058CBF000DB66F /* MAString.swift in Sources */,
@@ -678,6 +685,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17380920250B0F3100A2242E /* AuxiliarEnums.swift in Sources */,
 				17A48AB52509B67D00FB16D0 /* MACategoriesServiceTests.swift in Sources */,
 				175C6B082506CBDF0041832D /* MACategoriesViewModelTests.swift in Sources */,
 				1720BBE52506FEBC00C332CE /* MAFilterViewModelTests.swift in Sources */,

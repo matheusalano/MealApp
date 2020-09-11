@@ -18,5 +18,12 @@ struct MAString {
         private init() {}
     }
 
+    struct Errors {
+        static let generic = "errors_generic"
+        static let noConnection = "errors_no_connection"
+
+        private init() {}
+    }
+
     private init() {}
 }
