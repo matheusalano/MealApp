@@ -34,7 +34,7 @@ final class MACategoriesViewModel: MACategoriesViewModelProtocol {
         state = _state.asDriver(onErrorRecover: { _ in Driver.empty() })
 
         categories = loadCategories
-            .flatMap({
+            .flatMapLatest({
                 service.getCategories()
                     .asObservable()
                     .do(onNext: { _ in _state.onNext(.data) },

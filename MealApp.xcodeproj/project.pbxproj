@@ -8,10 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		1720BBE52506FEBC00C332CE /* MAFilterViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1720BBE42506FEBC00C332CE /* MAFilterViewModelTests.swift */; };
+		172222E5251191ED007BDF43 /* SnapshotTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172222E4251191ED007BDF43 /* SnapshotTestCase.swift */; };
+		172222E72511951E007BDF43 /* MACategoriesViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172222E62511951E007BDF43 /* MACategoriesViewControllerTests.swift */; };
 		1738091E250B0B0500A2242E /* UIViewController+Reactive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1738091D250B0B0500A2242E /* UIViewController+Reactive.swift */; };
 		17380920250B0F3100A2242E /* AuxiliarEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1738091F250B0F3100A2242E /* AuxiliarEnums.swift */; };
 		17380922250B13D500A2242E /* MACategoriesCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17380921250B13D500A2242E /* MACategoriesCoordinatorTests.swift */; };
 		17380924250B13F100A2242E /* AppNavigatorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17380923250B13F100A2242E /* AppNavigatorSpy.swift */; };
+		17380927250B1DB300A2242E /* MACategoriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17380926250B1DB300A2242E /* MACategoriesCell.swift */; };
 		175C6B032506C6BD0041832D /* MACategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175C6B022506C6BD0041832D /* MACategoriesViewModel.swift */; };
 		175C6B082506CBDF0041832D /* MACategoriesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175C6B072506CBDF0041832D /* MACategoriesViewModelTests.swift */; };
 		175C6B0A2506CC260041832D /* QuickSpec+BDT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175C6B092506CC260041832D /* QuickSpec+BDT.swift */; };
@@ -66,10 +69,13 @@
 /* Begin PBXFileReference section */
 		13D930F3EC491CBB431643DC /* Pods_MealApp_MealAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MealApp_MealAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1720BBE42506FEBC00C332CE /* MAFilterViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAFilterViewModelTests.swift; sourceTree = "<group>"; };
+		172222E4251191ED007BDF43 /* SnapshotTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotTestCase.swift; sourceTree = "<group>"; };
+		172222E62511951E007BDF43 /* MACategoriesViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MACategoriesViewControllerTests.swift; sourceTree = "<group>"; };
 		1738091D250B0B0500A2242E /* UIViewController+Reactive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Reactive.swift"; sourceTree = "<group>"; };
 		1738091F250B0F3100A2242E /* AuxiliarEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuxiliarEnums.swift; sourceTree = "<group>"; };
 		17380921250B13D500A2242E /* MACategoriesCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MACategoriesCoordinatorTests.swift; sourceTree = "<group>"; };
 		17380923250B13F100A2242E /* AppNavigatorSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigatorSpy.swift; sourceTree = "<group>"; };
+		17380926250B1DB300A2242E /* MACategoriesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MACategoriesCell.swift; sourceTree = "<group>"; };
 		175C6B022506C6BD0041832D /* MACategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MACategoriesViewModel.swift; sourceTree = "<group>"; };
 		175C6B072506CBDF0041832D /* MACategoriesViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MACategoriesViewModelTests.swift; sourceTree = "<group>"; };
 		175C6B092506CC260041832D /* QuickSpec+BDT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuickSpec+BDT.swift"; sourceTree = "<group>"; };
@@ -161,6 +167,14 @@
 			path = Filter;
 			sourceTree = "<group>";
 		};
+		17380925250B1D9F00A2242E /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				17380926250B1DB300A2242E /* MACategoriesCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		175C6B042506CBB30041832D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +198,7 @@
 				175C6B072506CBDF0041832D /* MACategoriesViewModelTests.swift */,
 				17A48AB42509B67D00FB16D0 /* MACategoriesServiceTests.swift */,
 				17380921250B13D500A2242E /* MACategoriesCoordinatorTests.swift */,
+				172222E62511951E007BDF43 /* MACategoriesViewControllerTests.swift */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -210,6 +225,7 @@
 				17A48AB72509BA1E00FB16D0 /* AppServiceMock.swift */,
 				1738091F250B0F3100A2242E /* AuxiliarEnums.swift */,
 				17380923250B13F100A2242E /* AppNavigatorSpy.swift */,
+				172222E4251191ED007BDF43 /* SnapshotTestCase.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -280,6 +296,7 @@
 		17B3D0F225058775000DB66F /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				17380925250B1D9F00A2242E /* Cells */,
 				17B3D0F32505879D000DB66F /* MACategoriesCoordinator.swift */,
 				17B3D0F725058BC7000DB66F /* MACategoriesView.swift */,
 				17B3D0F925058BF4000DB66F /* MACategoriesViewController.swift */,
@@ -684,6 +701,7 @@
 				17A48AB02509B25100FB16D0 /* MACategoryModel.swift in Sources */,
 				17B3D0FF25059127000DB66F /* String+Localized.swift in Sources */,
 				17B3D0FA25058BF4000DB66F /* MACategoriesViewController.swift in Sources */,
+				17380927250B1DB300A2242E /* MACategoriesCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -693,7 +711,9 @@
 			files = (
 				17380922250B13D500A2242E /* MACategoriesCoordinatorTests.swift in Sources */,
 				17380920250B0F3100A2242E /* AuxiliarEnums.swift in Sources */,
+				172222E72511951E007BDF43 /* MACategoriesViewControllerTests.swift in Sources */,
 				17A48AB52509B67D00FB16D0 /* MACategoriesServiceTests.swift in Sources */,
+				172222E5251191ED007BDF43 /* SnapshotTestCase.swift in Sources */,
 				17380924250B13F100A2242E /* AppNavigatorSpy.swift in Sources */,
 				175C6B082506CBDF0041832D /* MACategoriesViewModelTests.swift in Sources */,
 				1720BBE52506FEBC00C332CE /* MAFilterViewModelTests.swift in Sources */,
