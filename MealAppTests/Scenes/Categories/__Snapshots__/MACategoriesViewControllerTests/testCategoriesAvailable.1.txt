@@ -1,0 +1,51 @@
+<UILayoutContainerView; frame = (0 0; 414 818); autoresize = W+H; layer = <CALayer>>
+   | <UITransitionView; frame = (0 0; 414 818); clipsToBounds = YES; autoresize = W+H; layer = <CALayer>>
+   |    | <UIViewControllerWrapperView; frame = (0 0; 414 818); autoresize = W+H; layer = <CALayer>>
+   |    |    | <UILayoutContainerView; frame = (0 0; 414 818); clipsToBounds = YES; autoresize = W+H; gestureRecognizers = <NSArray>; layer = <CALayer>>
+   |    |    |    | <UINavigationTransitionView; frame = (0 0; 414 818); clipsToBounds = YES; autoresize = W+H; layer = <CALayer>>
+   |    |    |    |    | <UIViewControllerWrapperView; frame = (0 0; 414 818); layer = <CALayer>>
+   |    |    |    |    |    | <MealApp.MACategoriesView; frame = (0 0; 414 818); layer = <CALayer>>
+   |    |    |    |    |    |    | <UICollectionView; frame = (0 0; 414 818); clipsToBounds = YES; gestureRecognizers = <NSArray>; layer = <CALayer>; contentOffset: {0, -88}; contentSize: {414, 231}; adjustedContentInset: {88, 0, 49, 0}; layout: <MealApp.ColumnFlowLayout>; dataSource: <RxCocoa.RxCollectionViewDataSourceProxy>>
+   |    |    |    |    |    |    |    | <MealApp.MACategoriesCell; baseClass = UICollectionViewCell; frame = (24 16; 175 87.5); clipsToBounds = YES; layer = <CALayer>>
+   |    |    |    |    |    |    |    |    | <UIView; frame = (0 0; 175 87.5); gestureRecognizers = <NSArray>; layer = <CALayer>>
+   |    |    |    |    |    |    |    |    | <UIImageView; frame = (0 0; 175 87.5); userInteractionEnabled = NO; layer = <CALayer>>
+   |    |    |    |    |    |    |    |    | <UIView; frame = (0 0; 175 87.5); layer = <CALayer>>
+   |    |    |    |    |    |    |    |    | <UILabel; frame = (8 8; 159 19.5); text = 'test_name'; userInteractionEnabled = NO; layer = <_UILabelLayer>>
+   |    |    |    |    |    |    |    | <MealApp.MACategoriesCell; baseClass = UICollectionViewCell; frame = (215 16; 175 87.5); clipsToBounds = YES; layer = <CALayer>>
+   |    |    |    |    |    |    |    |    | <UIView; frame = (0 0; 175 87.5); gestureRecognizers = <NSArray>; layer = <CALayer>>
+   |    |    |    |    |    |    |    |    | <UIImageView; frame = (0 0; 175 87.5); userInteractionEnabled = NO; layer = <CALayer>>
+   |    |    |    |    |    |    |    |    | <UIView; frame = (0 0; 175 87.5); layer = <CALayer>>
+   |    |    |    |    |    |    |    |    | <UILabel; frame = (8 8; 159 19.5); text = 'test_2'; userInteractionEnabled = NO; layer = <_UILabelLayer>>
+   |    |    |    |    |    |    |    | <MealApp.MACategoriesCell; baseClass = UICollectionViewCell; frame = (24 127.5; 175 87.5); clipsToBounds = YES; layer = <CALayer>>
+   |    |    |    |    |    |    |    |    | <UIView; frame = (0 0; 175 87.5); gestureRecognizers = <NSArray>; layer = <CALayer>>
+   |    |    |    |    |    |    |    |    | <UIImageView; frame = (0 0; 175 87.5); userInteractionEnabled = NO; layer = <CALayer>>
+   |    |    |    |    |    |    |    |    | <UIView; frame = (0 0; 175 87.5); layer = <CALayer>>
+   |    |    |    |    |    |    |    |    | <UILabel; frame = (8 8; 159 19.5); text = 'test_3'; userInteractionEnabled = NO; layer = <_UILabelLayer>>
+   |    |    |    |    |    |    |    | <_UIScrollViewScrollIndicator; frame = (408 671; 3 7); alpha = 0; autoresize = LM; layer = <CALayer>>
+   |    |    |    |    |    |    |    |    | <UIView; frame = (0 0; 3 7); layer = <CALayer>>
+   |    |    |    |    |    |    |    | <_UIScrollViewScrollIndicator; frame = (404 675; 7 3); alpha = 0; autoresize = TM; layer = <CALayer>>
+   |    |    |    |    |    |    |    |    | <UIView; frame = (0 0; 7 3); layer = <CALayer>>
+   |    |    |    | <UINavigationBar; frame = (0 44; 414 44); opaque = NO; autoresize = W; layer = <CALayer>>
+   |    |    |    |    | <_UIBarBackground; frame = (0 -44; 414 88); userInteractionEnabled = NO; layer = <CALayer>>
+   |    |    |    |    |    | <_UIBarBackgroundShadowView; frame = (0 88; 414 0.5); layer = <CALayer>> clientRequestedContentView effect=none
+   |    |    |    |    |    |    | <_UIBarBackgroundShadowContentImageView; frame = (0 0; 414 0.5); autoresize = W+H; userInteractionEnabled = NO; layer = <CALayer>>
+   |    |    |    |    |    | <UIVisualEffectView; frame = (0 0; 414 88); layer = <CALayer>> effect=none
+   |    |    |    |    |    |    | <_UIVisualEffectBackdropView; frame = (0 0; 414 88); autoresize = W+H; userInteractionEnabled = NO; layer = <UICABackdropLayer>>
+   |    |    |    |    | <_UINavigationBarContentView; frame = (0 0; 414 44); layer = <CALayer>> layout=
+   |    |    |    |    |    | <_UIButtonBarStackView; frame = (12 0; 46 44); layer = <CALayer>> buttonBar=
+   |    |    |    |    |    |    | <_UIButtonBarButton; frame = (0 0; 46 44); tintColor = <UIDynamicSystemColor; name = systemBlueColor>; layer = <CALayer>>
+   |    |    |    |    |    |    |    | <_UIModernBarButton; frame = (8 9; 27 26); opaque = NO; userInteractionEnabled = NO; layer = <CALayer>>
+   |    |    |    |    |    |    |    |    | <UIImageView; frame = (0 0; 27 26); clipsToBounds = YES; opaque = NO; userInteractionEnabled = NO; layer = <CALayer>>
+   |    |    |    |    |    | <UILabel; frame = (163.5 12; 87.5 20.5); text = 'Categories'; userInteractionEnabled = NO; layer = <_UILabelLayer>>
+   |    |    |    |    | <UIView; frame = (0 0; 0 0); userInteractionEnabled = NO; layer = <CALayer>>
+   | <UITabBar; frame = (0 769; 414 49); autoresize = W+TM; gestureRecognizers = <NSArray>; layer = <CALayer>>
+   |    | <_UIBarBackground; frame = (0 0; 414 49); userInteractionEnabled = NO; layer = <CALayer>>
+   |    |    | <_UIBarBackgroundShadowView; frame = (0 -0.5; 414 0.5); layer = <CALayer>> clientRequestedContentView effect=none
+   |    |    |    | <_UIBarBackgroundShadowContentImageView; frame = (0 0; 414 0.5); autoresize = W+H; userInteractionEnabled = NO; layer = <CALayer>>
+   |    |    | <UIVisualEffectView; frame = (0 0; 414 49); layer = <CALayer>> effect=none
+   |    |    |    | <_UIVisualEffectBackdropView; frame = (0 0; 414 49); autoresize = W+H; userInteractionEnabled = NO; layer = <UICABackdropLayer>>
+   |    | <UITabBarButton; frame = (2 1; 410 48); opaque = NO; layer = <CALayer>>
+   |    |    | <UIVisualEffectView; frame = (0 0; 410 48); userInteractionEnabled = NO; layer = <CALayer>> clientRequestedContentView effect=<UIVibrancyEffect> style=UIBlurEffectStyleSystemChromeMaterial vibrancyStyle=UIVibrancyEffectStyleFill
+   |    |    |    | <_UIVisualEffectContentView; frame = (0 0; 410 48); autoresize = W+H; tintColor = UIExtendedGrayColorSpace 1 1; layer = <CALayer>> disablesGroupFiltering
+   |    |    | <UITabBarSwappableImageView; frame = (191 8; 28 22); opaque = NO; userInteractionEnabled = NO; layer = <CALayer>>
+   |    |    | <UITabBarButtonLabel; frame = (178 34.5; 54 12); text = 'Categories'; opaque = NO; userInteractionEnabled = NO; layer = <_UILabelLayer>>

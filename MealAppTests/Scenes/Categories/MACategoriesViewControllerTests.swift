@@ -1,10 +1,15 @@
-import RxSwift
 import RxCocoa
+import RxSwift
 
 @testable import MealApp
 
 final class MACategoriesViewControllerTests: SnapshotTestCase {
-    
+    func testCategoriesAvailable() {
+        assertViewController(matching: {
+            let viewModel = MACategoriesViewModelMock(result: .success)
+            return MACategoriesViewController(viewModel: viewModel)
+        })
+    }
 }
 
 private final class MACategoriesViewModelMock: MACategoriesViewModelProtocol {
@@ -20,8 +25,8 @@ private final class MACategoriesViewModelMock: MACategoriesViewModelProtocol {
             .flatMapLatest({ _ -> Observable<MACategoriesResponse> in
                 switch result {
                 case .success:
-                    return .just(.dummy)
-                case .failure(error: let error):
+                    return .just(.dummyVC)
+                case let .failure(error: error):
                     return .error(error)
                 }
             })
