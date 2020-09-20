@@ -10,6 +10,7 @@
 		1720BBE52506FEBC00C332CE /* MAFilterViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1720BBE42506FEBC00C332CE /* MAFilterViewModelTests.swift */; };
 		172222E5251191ED007BDF43 /* SnapshotTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172222E4251191ED007BDF43 /* SnapshotTestCase.swift */; };
 		172222E72511951E007BDF43 /* MACategoriesViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172222E62511951E007BDF43 /* MACategoriesViewControllerTests.swift */; };
+		172534372517FF970094B166 /* MANeumorphicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172534362517FF970094B166 /* MANeumorphicView.swift */; };
 		1738091E250B0B0500A2242E /* UIViewController+Reactive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1738091D250B0B0500A2242E /* UIViewController+Reactive.swift */; };
 		17380920250B0F3100A2242E /* AuxiliarEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1738091F250B0F3100A2242E /* AuxiliarEnums.swift */; };
 		17380922250B13D500A2242E /* MACategoriesCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17380921250B13D500A2242E /* MACategoriesCoordinatorTests.swift */; };
@@ -18,6 +19,7 @@
 		175C6B032506C6BD0041832D /* MACategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175C6B022506C6BD0041832D /* MACategoriesViewModel.swift */; };
 		175C6B082506CBDF0041832D /* MACategoriesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175C6B072506CBDF0041832D /* MACategoriesViewModelTests.swift */; };
 		175C6B0A2506CC260041832D /* QuickSpec+BDT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175C6B092506CC260041832D /* QuickSpec+BDT.swift */; };
+		178FC7352514336300122E8E /* MANeumorphicLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178FC7342514336300122E8E /* MANeumorphicLayer.swift */; };
 		179664E22506F36700CFA3E9 /* MAFilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179664E12506F36700CFA3E9 /* MAFilterViewModel.swift */; };
 		17A48AAD2509B15900FB16D0 /* MACategoriesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A48AAC2509B15900FB16D0 /* MACategoriesService.swift */; };
 		17A48AB02509B25100FB16D0 /* MACategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A48AAF2509B25100FB16D0 /* MACategoryModel.swift */; };
@@ -71,6 +73,7 @@
 		1720BBE42506FEBC00C332CE /* MAFilterViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAFilterViewModelTests.swift; sourceTree = "<group>"; };
 		172222E4251191ED007BDF43 /* SnapshotTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotTestCase.swift; sourceTree = "<group>"; };
 		172222E62511951E007BDF43 /* MACategoriesViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MACategoriesViewControllerTests.swift; sourceTree = "<group>"; };
+		172534362517FF970094B166 /* MANeumorphicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MANeumorphicView.swift; sourceTree = "<group>"; };
 		1738091D250B0B0500A2242E /* UIViewController+Reactive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Reactive.swift"; sourceTree = "<group>"; };
 		1738091F250B0F3100A2242E /* AuxiliarEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuxiliarEnums.swift; sourceTree = "<group>"; };
 		17380921250B13D500A2242E /* MACategoriesCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MACategoriesCoordinatorTests.swift; sourceTree = "<group>"; };
@@ -79,6 +82,7 @@
 		175C6B022506C6BD0041832D /* MACategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MACategoriesViewModel.swift; sourceTree = "<group>"; };
 		175C6B072506CBDF0041832D /* MACategoriesViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MACategoriesViewModelTests.swift; sourceTree = "<group>"; };
 		175C6B092506CC260041832D /* QuickSpec+BDT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuickSpec+BDT.swift"; sourceTree = "<group>"; };
+		178FC7342514336300122E8E /* MANeumorphicLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MANeumorphicLayer.swift; sourceTree = "<group>"; };
 		179664E12506F36700CFA3E9 /* MAFilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAFilterViewModel.swift; sourceTree = "<group>"; };
 		17A48AAC2509B15900FB16D0 /* MACategoriesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MACategoriesService.swift; sourceTree = "<group>"; };
 		17A48AAF2509B25100FB16D0 /* MACategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MACategoryModel.swift; sourceTree = "<group>"; };
@@ -165,6 +169,15 @@
 				1720BBE42506FEBC00C332CE /* MAFilterViewModelTests.swift */,
 			);
 			path = Filter;
+			sourceTree = "<group>";
+		};
+		172534352517FF760094B166 /* Neumorphic */ = {
+			isa = PBXGroup;
+			children = (
+				178FC7342514336300122E8E /* MANeumorphicLayer.swift */,
+				172534362517FF970094B166 /* MANeumorphicView.swift */,
+			);
+			path = Neumorphic;
 			sourceTree = "<group>";
 		};
 		17380925250B1D9F00A2242E /* Cells */ = {
@@ -277,6 +290,7 @@
 		17B3D0E925058619000DB66F /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				172534352517FF760094B166 /* Neumorphic */,
 				17B3D0EA25058628000DB66F /* MANavigationController.swift */,
 				17B3D0EF25058723000DB66F /* BaseCoordinator.swift */,
 				17B3D0F5250587B4000DB66F /* BaseViewController.swift */,
@@ -684,9 +698,11 @@
 				17AE06492505A5AA006A53F6 /* MAFilterView.swift in Sources */,
 				17B3D10125059A6B000DB66F /* AppCoordinator.swift in Sources */,
 				17B3D0FC25058CBF000DB66F /* MAString.swift in Sources */,
+				172534372517FF970094B166 /* MANeumorphicView.swift in Sources */,
 				17B3D0F825058BC7000DB66F /* MACategoriesView.swift in Sources */,
 				17B3D0F42505879D000DB66F /* MACategoriesCoordinator.swift in Sources */,
 				17B3D0F025058723000DB66F /* BaseCoordinator.swift in Sources */,
+				178FC7352514336300122E8E /* MANeumorphicLayer.swift in Sources */,
 				17AE06462505A176006A53F6 /* AppService.swift in Sources */,
 				175C6B032506C6BD0041832D /* MACategoriesViewModel.swift in Sources */,
 				17B3D0EB25058628000DB66F /* MANavigationController.swift in Sources */,

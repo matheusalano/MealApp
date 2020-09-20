@@ -90,7 +90,7 @@ final class MACategoriesViewModelTests: QuickSpec {
                         .disposed(by: self.disposeBag)
                 }
 
-                then("then error must be presented") {
+                then("then data must be correct") {
                     let observer = self.scheduler.start({ self.sut.categories.asObservable() })
                     expect(observer.events).to(equal([.next(300, [.dummy])]))
                 }

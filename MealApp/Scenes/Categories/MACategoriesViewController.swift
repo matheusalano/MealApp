@@ -6,7 +6,7 @@ final class MACategoriesViewController: BaseViewController<MACategoriesView> {
     private let viewModel: MACategoriesViewModelProtocol
     private let collectionView: UICollectionView = {
         $0.register(MACategoriesCell.self, forCellWithReuseIdentifier: MACategoriesCell.description())
-        $0.backgroundColor = .systemBackground
+        $0.backgroundColor = .clear
         $0.alwaysBounceVertical = true
         return $0
     }(UICollectionView(frame: .zero, collectionViewLayout: ColumnFlowLayout()))
