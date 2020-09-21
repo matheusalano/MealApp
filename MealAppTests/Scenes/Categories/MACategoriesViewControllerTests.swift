@@ -1,14 +1,43 @@
+import Nimble
+import Quick
 import RxCocoa
 import RxSwift
+import RxTest
 
 @testable import MealApp
 
-final class MACategoriesViewControllerTests: SnapshotTestCase {
-    func testCategoriesAvailable() {
-        assertViewController(matching: {
-            let viewModel = MACategoriesViewModelMock(result: .success)
-            return MACategoriesViewController(viewModel: viewModel)
-        })
+final class MACategoriesViewControllerTests: QuickSpec {
+    private var viewModel: MACategoriesViewModelMock!
+    private var sut: MACategoriesViewController!
+    private var scheduler: TestScheduler!
+    private var disposeBag: DisposeBag!
+
+    override func spec() {
+        super.spec()
+
+        start()
+    }
+
+    private func setup(result: ResultType = .success) {
+        scheduler = TestScheduler(initialClock: 0)
+        disposeBag = DisposeBag()
+
+        viewModel = MACategoriesViewModelMock(result: result)
+        sut = MACategoriesViewController(viewModel: viewModel)
+    }
+
+    private func start() {
+        describe("MACategoriesViewController") {
+            given("given viewModel returns successfully") {
+                beforeEach {
+                    self.setup()
+                }
+
+                then("then it has valid snapshot") {
+                    expect(self.sut).to(haveValidSnapshot(testName: "data_available"))
+                }
+            }
+        }
     }
 }
 

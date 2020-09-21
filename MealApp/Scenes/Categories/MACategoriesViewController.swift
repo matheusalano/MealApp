@@ -4,12 +4,6 @@ final class MACategoriesViewController: BaseViewController<MACategoriesView> {
     //MARK: Private constants
 
     private let viewModel: MACategoriesViewModelProtocol
-    private let collectionView: UICollectionView = {
-        $0.register(MACategoriesCell.self, forCellWithReuseIdentifier: MACategoriesCell.description())
-        $0.backgroundColor = .clear
-        $0.alwaysBounceVertical = true
-        return $0
-    }(UICollectionView(frame: .zero, collectionViewLayout: ColumnFlowLayout()))
 
     //MARK: Initializers
 
@@ -31,8 +25,6 @@ final class MACategoriesViewController: BaseViewController<MACategoriesView> {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        addSubviews()
-        installConstraints()
         setupBindings()
     }
 
@@ -52,21 +44,11 @@ final class MACategoriesViewController: BaseViewController<MACategoriesView> {
         )
     }
 
-    private func addSubviews() {
-        view.addSubview(collectionView)
-    }
-
-    private func installConstraints() {
-        collectionView.snp.makeConstraints {
-            $0.edges.equalToSuperview()
-        }
-    }
-
     private func setupBindings() {
         //MARK: Outputs
 
         viewModel.categories
-            .drive(collectionView.rx.items(cellIdentifier: MACategoriesCell.description(), cellType: MACategoriesCell.self)) { _, element, cell in
+            .drive(customView.collectionView.rx.items(cellIdentifier: MACategoriesCell.description(), cellType: MACategoriesCell.self)) { _, element, cell in
                 cell.configure(with: element)
             }
             .disposed(by: disposeBag)
