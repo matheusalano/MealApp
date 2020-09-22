@@ -19,6 +19,7 @@
 		175C6B082506CBDF0041832D /* MACategoriesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175C6B072506CBDF0041832D /* MACategoriesViewModelTests.swift */; };
 		175C6B0A2506CC260041832D /* QuickSpec+BDT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175C6B092506CC260041832D /* QuickSpec+BDT.swift */; };
 		17670E0625183BD6009AF6D4 /* Nimble+Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17670E0525183BD6009AF6D4 /* Nimble+Snapshot.swift */; };
+		17826C3E25196F040041BE97 /* MAErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17826C3D25196F040041BE97 /* MAErrorView.swift */; };
 		178FC7352514336300122E8E /* MANeumorphicLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178FC7342514336300122E8E /* MANeumorphicLayer.swift */; };
 		179664E22506F36700CFA3E9 /* MAFilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179664E12506F36700CFA3E9 /* MAFilterViewModel.swift */; };
 		17A48AAD2509B15900FB16D0 /* MACategoriesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A48AAC2509B15900FB16D0 /* MACategoriesService.swift */; };
@@ -82,6 +83,7 @@
 		175C6B072506CBDF0041832D /* MACategoriesViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MACategoriesViewModelTests.swift; sourceTree = "<group>"; };
 		175C6B092506CC260041832D /* QuickSpec+BDT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuickSpec+BDT.swift"; sourceTree = "<group>"; };
 		17670E0525183BD6009AF6D4 /* Nimble+Snapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Nimble+Snapshot.swift"; sourceTree = "<group>"; };
+		17826C3D25196F040041BE97 /* MAErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAErrorView.swift; sourceTree = "<group>"; };
 		178FC7342514336300122E8E /* MANeumorphicLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MANeumorphicLayer.swift; sourceTree = "<group>"; };
 		179664E12506F36700CFA3E9 /* MAFilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAFilterViewModel.swift; sourceTree = "<group>"; };
 		17A48AAC2509B15900FB16D0 /* MACategoriesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MACategoriesService.swift; sourceTree = "<group>"; };
@@ -294,6 +296,7 @@
 				17B3D0EA25058628000DB66F /* MANavigationController.swift */,
 				17B3D0EF25058723000DB66F /* BaseCoordinator.swift */,
 				17B3D0F5250587B4000DB66F /* BaseViewController.swift */,
+				17826C3D25196F040041BE97 /* MAErrorView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -710,6 +713,7 @@
 				179664E22506F36700CFA3E9 /* MAFilterViewModel.swift in Sources */,
 				17C7559325057B3D00D9AB36 /* AppDelegate.swift in Sources */,
 				17B3D0F6250587B4000DB66F /* BaseViewController.swift in Sources */,
+				17826C3E25196F040041BE97 /* MAErrorView.swift in Sources */,
 				17C7559525057B3D00D9AB36 /* SceneDelegate.swift in Sources */,
 				17AE064D2505A5EA006A53F6 /* MAFilterCoordinator.swift in Sources */,
 				17A48AAD2509B15900FB16D0 /* MACategoriesService.swift in Sources */,

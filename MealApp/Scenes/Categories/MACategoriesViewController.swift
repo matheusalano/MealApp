@@ -47,6 +47,23 @@ final class MACategoriesViewController: BaseViewController<MACategoriesView> {
     private func setupBindings() {
         //MARK: Outputs
 
+        viewModel.state
+            .do(onSubscribe: { [weak self] in self?.customView.collectionView.isHidden = true })
+            .drive(onNext: { [weak self] state in
+                guard let self = self else { return }
+
+                switch state {
+                case .loading:
+                    self.customView.errorView.removeFromSuperview()
+                case let .error(error):
+                    self.customView.errorView.title = error
+                    self.customView.errorView.insert(onto: self.customView)
+                case .data:
+                    self.customView.collectionView.isHidden = false
+                }
+            })
+            .disposed(by: disposeBag)
+
         viewModel.categories
             .drive(customView.collectionView.rx.items(cellIdentifier: MACategoriesCell.description(), cellType: MACategoriesCell.self)) { _, element, cell in
                 cell.configure(with: element)
@@ -63,6 +80,10 @@ final class MACategoriesViewController: BaseViewController<MACategoriesView> {
             .withLatestFrom(rx.viewDidDisappear)
             .map({ _ in () })
             .startWith(())
+            .bind(to: viewModel.loadCategories)
+            .disposed(by: disposeBag)
+
+        customView.errorView.retryTap
             .bind(to: viewModel.loadCategories)
             .disposed(by: disposeBag)
     }

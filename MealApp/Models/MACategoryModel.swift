@@ -5,8 +5,10 @@ struct MACategory: Decodable, Equatable, Identifiable {
     let name: String
     let thumbURL: String
     let description: String
+}
 
-    private enum CodingKeys: String, CodingKey {
+extension MACategory {
+    enum CodingKeys: String, CodingKey {
         case id = "idCategory"
         case name = "strCategory"
         case thumbURL = "strCategoryThumb"

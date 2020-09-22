@@ -3,6 +3,8 @@ import UIKit
 final class MACategoriesView: UIView {
     //MARK: Internal constants
 
+    let errorView = MAErrorView()
+
     let collectionView: UICollectionView = {
         $0.register(MACategoriesCell.self, forCellWithReuseIdentifier: MACategoriesCell.description())
         $0.backgroundColor = .clear
