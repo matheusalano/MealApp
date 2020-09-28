@@ -3,7 +3,7 @@ import Foundation
 struct MACategory: Decodable, Equatable, Identifiable {
     let id: String
     let name: String
-    let thumbURL: String
+    let thumbURL: URL
     let description: String
 }
 

@@ -6,11 +6,21 @@ final class MACategoriesView: UIView {
     let errorView = MAErrorView()
 
     let collectionView: UICollectionView = {
-        $0.register(MACategoriesCell.self, forCellWithReuseIdentifier: MACategoriesCell.description())
-        $0.backgroundColor = .clear
-        $0.alwaysBounceVertical = true
-        return $0
-    }(UICollectionView(frame: .zero, collectionViewLayout: ColumnFlowLayout()))
+        let layout = UICollectionViewFlowLayout()
+        layout.minimumInteritemSpacing = 16
+        layout.minimumLineSpacing = 24
+        layout.sectionInset = UIEdgeInsets(top: layout.minimumInteritemSpacing, left: 24, bottom: layout.minimumInteritemSpacing, right: 24)
+        layout.sectionInsetReference = .fromSafeArea
+        layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
+
+        let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        cv.register(MACategoriesCell.self, forCellWithReuseIdentifier: MACategoriesCell.description())
+        cv.register(MACategoriesMealCell.self, forCellWithReuseIdentifier: MACategoriesMealCell.description())
+        cv.backgroundColor = .clear
+        cv.alwaysBounceVertical = true
+
+        return cv
+    }()
 
     //MARK: Initializers
 

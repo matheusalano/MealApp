@@ -19,9 +19,13 @@
 		175C6B082506CBDF0041832D /* MACategoriesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175C6B072506CBDF0041832D /* MACategoriesViewModelTests.swift */; };
 		175C6B0A2506CC260041832D /* QuickSpec+BDT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175C6B092506CC260041832D /* QuickSpec+BDT.swift */; };
 		17670E0625183BD6009AF6D4 /* Nimble+Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17670E0525183BD6009AF6D4 /* Nimble+Snapshot.swift */; };
+		1777C1EB25227324002F53E3 /* MAMealDummies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1777C1EA25227324002F53E3 /* MAMealDummies.swift */; };
 		17826C3E25196F040041BE97 /* MAErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17826C3D25196F040041BE97 /* MAErrorView.swift */; };
 		178FC7352514336300122E8E /* MANeumorphicLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178FC7342514336300122E8E /* MANeumorphicLayer.swift */; };
 		179664E22506F36700CFA3E9 /* MAFilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179664E12506F36700CFA3E9 /* MAFilterViewModel.swift */; };
+		179DCBCB251E834B000BE6C4 /* MACategoriesMealCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179DCBCA251E834B000BE6C4 /* MACategoriesMealCell.swift */; };
+		179DCBCE251EAB8D000BE6C4 /* MAMealModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179DCBCD251EAB8D000BE6C4 /* MAMealModel.swift */; };
+		179DCBD0251EACA9000BE6C4 /* MACategoriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179DCBCF251EACA9000BE6C4 /* MACategoriesModel.swift */; };
 		17A48AAD2509B15900FB16D0 /* MACategoriesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A48AAC2509B15900FB16D0 /* MACategoriesService.swift */; };
 		17A48AB02509B25100FB16D0 /* MACategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A48AAF2509B25100FB16D0 /* MACategoryModel.swift */; };
 		17A48AB32509B5FB00FB16D0 /* MACategoryDummies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A48AB22509B5FB00FB16D0 /* MACategoryDummies.swift */; };
@@ -83,9 +87,13 @@
 		175C6B072506CBDF0041832D /* MACategoriesViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MACategoriesViewModelTests.swift; sourceTree = "<group>"; };
 		175C6B092506CC260041832D /* QuickSpec+BDT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuickSpec+BDT.swift"; sourceTree = "<group>"; };
 		17670E0525183BD6009AF6D4 /* Nimble+Snapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Nimble+Snapshot.swift"; sourceTree = "<group>"; };
+		1777C1EA25227324002F53E3 /* MAMealDummies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAMealDummies.swift; sourceTree = "<group>"; };
 		17826C3D25196F040041BE97 /* MAErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAErrorView.swift; sourceTree = "<group>"; };
 		178FC7342514336300122E8E /* MANeumorphicLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MANeumorphicLayer.swift; sourceTree = "<group>"; };
 		179664E12506F36700CFA3E9 /* MAFilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAFilterViewModel.swift; sourceTree = "<group>"; };
+		179DCBCA251E834B000BE6C4 /* MACategoriesMealCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MACategoriesMealCell.swift; sourceTree = "<group>"; };
+		179DCBCD251EAB8D000BE6C4 /* MAMealModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAMealModel.swift; sourceTree = "<group>"; };
+		179DCBCF251EACA9000BE6C4 /* MACategoriesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MACategoriesModel.swift; sourceTree = "<group>"; };
 		17A48AAC2509B15900FB16D0 /* MACategoriesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MACategoriesService.swift; sourceTree = "<group>"; };
 		17A48AAF2509B25100FB16D0 /* MACategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MACategoryModel.swift; sourceTree = "<group>"; };
 		17A48AB22509B5FB00FB16D0 /* MACategoryDummies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MACategoryDummies.swift; sourceTree = "<group>"; };
@@ -186,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				17380926250B1DB300A2242E /* MACategoriesCell.swift */,
+				179DCBCA251E834B000BE6C4 /* MACategoriesMealCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -223,6 +232,7 @@
 			isa = PBXGroup;
 			children = (
 				17A48AAF2509B25100FB16D0 /* MACategoryModel.swift */,
+				179DCBCD251EAB8D000BE6C4 /* MAMealModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -231,6 +241,7 @@
 			isa = PBXGroup;
 			children = (
 				17A48AB22509B5FB00FB16D0 /* MACategoryDummies.swift */,
+				1777C1EA25227324002F53E3 /* MAMealDummies.swift */,
 			);
 			path = Dummies;
 			sourceTree = "<group>";
@@ -319,6 +330,7 @@
 				17B3D0F925058BF4000DB66F /* MACategoriesViewController.swift */,
 				175C6B022506C6BD0041832D /* MACategoriesViewModel.swift */,
 				17A48AAC2509B15900FB16D0 /* MACategoriesService.swift */,
+				179DCBCF251EACA9000BE6C4 /* MACategoriesModel.swift */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -471,7 +483,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1150;
-				LastUpgradeCheck = 1150;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Matheus Alano";
 				TargetAttributes = {
 					17C7558E25057B3D00D9AB36 = {
@@ -704,9 +716,11 @@
 				172534372517FF970094B166 /* MANeumorphicView.swift in Sources */,
 				17B3D0F825058BC7000DB66F /* MACategoriesView.swift in Sources */,
 				17B3D0F42505879D000DB66F /* MACategoriesCoordinator.swift in Sources */,
+				179DCBCB251E834B000BE6C4 /* MACategoriesMealCell.swift in Sources */,
 				17B3D0F025058723000DB66F /* BaseCoordinator.swift in Sources */,
 				178FC7352514336300122E8E /* MANeumorphicLayer.swift in Sources */,
 				17AE06462505A176006A53F6 /* AppService.swift in Sources */,
+				179DCBD0251EACA9000BE6C4 /* MACategoriesModel.swift in Sources */,
 				175C6B032506C6BD0041832D /* MACategoriesViewModel.swift in Sources */,
 				17B3D0EB25058628000DB66F /* MANavigationController.swift in Sources */,
 				17B3D0EE25058664000DB66F /* AppNavigator.swift in Sources */,
@@ -719,6 +733,7 @@
 				17A48AAD2509B15900FB16D0 /* MACategoriesService.swift in Sources */,
 				17AE064B2505A5C7006A53F6 /* MAFilterViewController.swift in Sources */,
 				17A48AB02509B25100FB16D0 /* MACategoryModel.swift in Sources */,
+				179DCBCE251EAB8D000BE6C4 /* MAMealModel.swift in Sources */,
 				17B3D0FF25059127000DB66F /* String+Localized.swift in Sources */,
 				17B3D0FA25058BF4000DB66F /* MACategoriesViewController.swift in Sources */,
 				17380927250B1DB300A2242E /* MACategoriesCell.swift in Sources */,
@@ -736,6 +751,7 @@
 				17380924250B13F100A2242E /* AppNavigatorSpy.swift in Sources */,
 				17670E0625183BD6009AF6D4 /* Nimble+Snapshot.swift in Sources */,
 				175C6B082506CBDF0041832D /* MACategoriesViewModelTests.swift in Sources */,
+				1777C1EB25227324002F53E3 /* MAMealDummies.swift in Sources */,
 				1720BBE52506FEBC00C332CE /* MAFilterViewModelTests.swift in Sources */,
 				17A48AB32509B5FB00FB16D0 /* MACategoryDummies.swift in Sources */,
 				175C6B0A2506CC260041832D /* QuickSpec+BDT.swift in Sources */,
@@ -812,6 +828,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -872,6 +889,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;

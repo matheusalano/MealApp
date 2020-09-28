@@ -43,23 +43,38 @@ final class MACategoriesViewControllerTests: QuickSpec {
 
 private final class MACategoriesViewModelMock: MACategoriesViewModelProtocol {
     let didTapLeftBarButton = PublishSubject<Void>()
-    let loadCategories = PublishSubject<Void>()
+    let loadData = PublishSubject<Void>()
 
     let navigationTarget: Driver<Target> = .never()
-    let categories: Driver<[MACategory]>
-    let state: Driver<MACategoriesViewModelState> = .never()
+    let dataSource: Driver<[MACategorySectionModel]>
+    let state: Driver<MACategoriesViewModelState>
 
     init(result: ResultType) {
-        categories = loadCategories
+        let _state = PublishSubject<MACategoriesViewModelState>()
+        state = _state.asDriver(onErrorDriveWith: .never())
+
+        let categories = loadData
             .flatMapLatest({ _ -> Observable<MACategoriesResponse> in
                 switch result {
                 case .success:
+                    _state.onNext(.data)
                     return .just(.dummyVC)
                 case let .failure(error: error):
-                    return .error(error)
+                    _state.onNext(.error(error.readableMessage))
+                    return .never()
                 }
             })
-            .asDriver(onErrorRecover: { _ in .empty() })
-            .map({ $0.categories })
+            .share(replay: 1)
+            .map({ response -> [MACategorySectionModel] in
+                [.categorySection(items: response.categories.map({ .category($0) }))]
+            })
+
+        let randomMeal = loadData
+            .map({ MACategoriesMealResponse.dummy })
+            .map({ response -> [MACategorySectionModel] in
+                [.mealSection(items: response.meals.map({ .meal($0) }))]
+            })
+
+        dataSource = Observable.combineLatest(randomMeal, categories, resultSelector: { $0 + $1 }).asDriver(onErrorDriveWith: .never())
     }
 }

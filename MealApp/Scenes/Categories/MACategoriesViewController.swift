@@ -1,3 +1,4 @@
+import RxDataSources
 import UIKit
 
 final class MACategoriesViewController: BaseViewController<MACategoriesView> {
@@ -26,6 +27,8 @@ final class MACategoriesViewController: BaseViewController<MACategoriesView> {
         super.viewDidLoad()
 
         setupBindings()
+
+        viewModel.loadData.onNext(())
     }
 
     //MARK: Private functions
@@ -45,6 +48,8 @@ final class MACategoriesViewController: BaseViewController<MACategoriesView> {
     }
 
     private func setupBindings() {
+        customView.collectionView.rx.setDelegate(self).disposed(by: disposeBag)
+
         //MARK: Outputs
 
         viewModel.state
@@ -64,10 +69,8 @@ final class MACategoriesViewController: BaseViewController<MACategoriesView> {
             })
             .disposed(by: disposeBag)
 
-        viewModel.categories
-            .drive(customView.collectionView.rx.items(cellIdentifier: MACategoriesCell.description(), cellType: MACategoriesCell.self)) { _, element, cell in
-                cell.configure(with: element)
-            }
+        viewModel.dataSource
+            .drive(customView.collectionView.rx.items(dataSource: dataSource()))
             .disposed(by: disposeBag)
 
         //MARK: Inputs
@@ -76,27 +79,43 @@ final class MACategoriesViewController: BaseViewController<MACategoriesView> {
             .bind(to: viewModel.didTapLeftBarButton)
             .disposed(by: disposeBag)
 
-        rx.viewDidAppear
-            .withLatestFrom(rx.viewDidDisappear)
-            .map({ _ in () })
-            .startWith(())
-            .bind(to: viewModel.loadCategories)
-            .disposed(by: disposeBag)
-
         customView.errorView.retryTap
-            .bind(to: viewModel.loadCategories)
+            .bind(to: viewModel.loadData)
             .disposed(by: disposeBag)
+    }
+
+    private func dataSource() -> RxCollectionViewSectionedReloadDataSource<MACategorySectionModel> {
+        return RxCollectionViewSectionedReloadDataSource<MACategorySectionModel>(
+            configureCell: { dataSource, collectionView, indexPath, _ in
+                switch dataSource[indexPath] {
+                case let .category(category):
+                    guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MACategoriesCell.description(), for: indexPath) as? MACategoriesCell else { return UICollectionViewCell() }
+                    cell.configure(with: category)
+                    return cell
+                case let .meal(meal):
+                    guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MACategoriesMealCell.description(), for: indexPath) as? MACategoriesMealCell else { return UICollectionViewCell() }
+                    cell.configure(with: meal)
+                    return cell
+                }
+            })
     }
 }
 
-final class ColumnFlowLayout: UICollectionViewFlowLayout {
-    override func prepare() {
-        super.prepare()
+extension MACategoriesViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout _: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let screenWidth = UIScreen.main.fixedCoordinateSpace.bounds.width
+        let categoriesWidth = (screenWidth - 64) / 2
+        let categoriesSize = CGSize(width: categoriesWidth, height: categoriesWidth * 0.65)
 
-        estimatedItemSize = UICollectionViewFlowLayout.automaticSize
-        minimumInteritemSpacing = 16
-        minimumLineSpacing = 24
-        sectionInset = UIEdgeInsets(top: minimumInteritemSpacing, left: 24, bottom: minimumInteritemSpacing, right: 24)
-        sectionInsetReference = .fromSafeArea
+        guard collectionView.numberOfSections == 2 else {
+            return categoriesSize
+        }
+
+        if indexPath.section == 0 {
+            let mealWidth = screenWidth - 48
+            return CGSize(width: mealWidth, height: mealWidth / 2)
+        } else {
+            return categoriesSize
+        }
     }
 }

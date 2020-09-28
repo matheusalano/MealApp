@@ -5,6 +5,7 @@ struct MAString {
     struct Scenes {
         struct Categories {
             static let title = "scenes_categories_title"
+            static let mealCellSubtitle = "scenes_categories_cell_subtitle"
 
             private init() {}
         }

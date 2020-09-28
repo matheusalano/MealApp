@@ -50,10 +50,10 @@ final class MACategoriesCoordinatorTests: QuickSpec {
 
 private final class MACategoriesViewModelMock: MACategoriesViewModelProtocol {
     let didTapLeftBarButton = PublishSubject<Void>()
-    let loadCategories = PublishSubject<Void>()
+    let loadData = PublishSubject<Void>()
 
     let navigationTarget: Driver<Target>
-    let categories: Driver<[MACategory]> = .never()
+    let dataSource: Driver<[MACategorySectionModel]> = .never()
     let state: Driver<MACategoriesViewModelState> = .never()
 
     init() {

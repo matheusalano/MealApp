@@ -9,6 +9,7 @@ enum HTTPMethod: String, Equatable {
 enum APIPaths: String, Equatable {
     case search = "search.php"
     case categories = "categories.php"
+    case random = "random.php"
 }
 
 protocol AppServiceProtocol {

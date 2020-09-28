@@ -4,26 +4,36 @@ import RxSwift
 import SnapKit
 import UIKit
 
-final class MACategoriesCell: UICollectionViewCell {
+final class MACategoriesMealCell: UICollectionViewCell {
     //MARK: Private constants
 
     private let neumorphicView = MANeumorphicView()
 
     private let imageView: UIImageView = {
         $0.contentMode = .scaleAspectFill
-        $0.layer.cornerRadius = 26
         $0.clipsToBounds = true
-        $0.layer.borderWidth = 2
-        $0.layer.borderColor = UIColor.lightGray.cgColor
+        $0.layer.cornerRadius = 8
         return $0
     }(UIImageView())
 
+    private let maskImageView: UIView = {
+        $0.backgroundColor = UIColor.black.withAlphaComponent(0.4)
+        $0.clipsToBounds = true
+        $0.layer.cornerRadius = 8
+        return $0
+    }(UIView())
+
     private let title: UILabel = {
-        $0.font = UIFont.preferredFont(forTextStyle: .headline)
-        $0.textColor = .secondaryLabel
-        $0.adjustsFontForContentSizeCategory = true
-        $0.numberOfLines = 0
-        $0.setContentCompressionResistancePriority(.required, for: .vertical)
+        $0.font = UIFont.systemFont(ofSize: 30, weight: .heavy)
+        $0.textColor = .white
+        $0.numberOfLines = 2
+        return $0
+    }(UILabel())
+
+    private let subtitle: UILabel = {
+        $0.font = UIFont.systemFont(ofSize: 16, weight: .bold)
+        $0.textColor = .lightText
+        $0.text = .localized(by: MAString.Scenes.Categories.mealCellSubtitle)
         return $0
     }(UILabel())
 
@@ -58,42 +68,48 @@ final class MACategoriesCell: UICollectionViewCell {
     private func addSubviews() {
         addSubview(neumorphicView)
         addSubview(imageView)
+        addSubview(maskImageView)
         addSubview(title)
+        addSubview(subtitle)
     }
 
     private func installConstraints() {
         neumorphicView.snp.makeConstraints({ $0.edges.equalToSuperview() })
 
         imageView.snp.makeConstraints({
-            $0.size.equalTo(CGSize(width: 52, height: 52))
-            $0.top.equalToSuperview().offset(8)
-            $0.trailing.equalToSuperview().offset(-8)
+            $0.edges.equalToSuperview()
         })
+
+        maskImageView.snp.makeConstraints({ $0.edges.equalToSuperview() })
 
         snp.makeConstraints {
             let screenWidth = UIScreen.main.fixedCoordinateSpace.bounds.width
-            $0.width.equalTo((screenWidth - 64) / 2)
-            $0.width.lessThanOrEqualTo(screenWidth - 64)
-            $0.height.equalTo(snp.width).multipliedBy(0.65).priority(.high)
+            $0.width.equalTo(screenWidth - 48)
+            $0.height.equalTo(snp.width).dividedBy(2)
         }
 
         title.snp.makeConstraints {
             $0.leading.equalToSuperview().offset(8)
             $0.trailing.equalToSuperview().offset(-8)
-            $0.top.greaterThanOrEqualTo(imageView.snp.bottom).offset(8)
             $0.bottom.equalToSuperview().offset(-8)
+        }
+
+        subtitle.snp.makeConstraints {
+            $0.leading.equalToSuperview().offset(8)
+            $0.trailing.equalToSuperview().offset(-8)
+            $0.bottom.equalTo(title.snp.top).offset(-4)
         }
     }
 
     //MARK: Internal functions
 
-    func configure(with category: MACategory) {
-        title.text = category.name
+    func configure(with meal: MAMeal) {
+        title.text = meal.strMeal
 
         disposeBag = DisposeBag()
         imageView.image = nil
 
-        ImagePipeline.shared.rx.loadImage(with: category.thumbURL)
+        ImagePipeline.shared.rx.loadImage(with: meal.strMealThumb)
             .map({ $0.image })
             .asDriver(onErrorRecover: { _ in .empty() })
             .drive(imageView.rx.image)

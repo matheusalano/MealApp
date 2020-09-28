@@ -1,4 +1,6 @@
 "scenes_categories_title" = "Categories";
+"scenes_categories_cell_subtitle" = "RANDOM MEAL";
+
 "scenes_filter_title" = "Filter";
 "errors_generic" = "Oops! Something went wrong!";
 "errors_no_connection" = "The Internet connection appears to be offline.";

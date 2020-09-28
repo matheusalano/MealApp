@@ -1,12 +1,9 @@
 import Foundation
 import RxSwift
 
-struct MACategoriesResponse: Decodable, Equatable {
-    let categories: [MACategory]
-}
-
 protocol MACategoriesServiceProtocol {
     func getCategories() -> Single<MACategoriesResponse>
+    func getRandomMeal() -> Single<MACategoriesMealResponse>
 }
 
 final class MACategoriesService: MACategoriesServiceProtocol {
@@ -18,5 +15,9 @@ final class MACategoriesService: MACategoriesServiceProtocol {
 
     func getCategories() -> Single<MACategoriesResponse> {
         return service.request(path: .categories, method: .GET, queryItems: nil, body: nil)
+    }
+
+    func getRandomMeal() -> Single<MACategoriesMealResponse> {
+        return service.request(path: .random, method: .GET, queryItems: nil, body: nil)
     }
 }
