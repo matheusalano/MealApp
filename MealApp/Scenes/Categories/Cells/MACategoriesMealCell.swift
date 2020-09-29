@@ -104,12 +104,12 @@ final class MACategoriesMealCell: UICollectionViewCell {
     //MARK: Internal functions
 
     func configure(with meal: MAMeal) {
-        title.text = meal.strMeal
+        title.text = meal.name
 
         disposeBag = DisposeBag()
         imageView.image = nil
 
-        ImagePipeline.shared.rx.loadImage(with: meal.strMealThumb)
+        ImagePipeline.shared.rx.loadImage(with: meal.thumbURL)
             .map({ $0.image })
             .asDriver(onErrorRecover: { _ in .empty() })
             .drive(imageView.rx.image)
