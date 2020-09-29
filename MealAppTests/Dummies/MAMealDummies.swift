@@ -8,8 +8,6 @@ extension MAMealBasic {
     static let dummy = MAMealBasic(
         id: "123",
         name: "test_name",
-        category: "test_cat",
-        area: "test_area",
         thumbURL: URL(string: "test_thumb")!
     )
 }
@@ -28,4 +26,8 @@ extension MAMeal {
 
 extension MACategoriesMealResponse {
     static let dummy = MACategoriesMealResponse(meals: [.dummy])
+}
+
+extension MACatDetailResponse {
+    static let dummy = MACatDetailResponse(meals: [.dummy])
 }
