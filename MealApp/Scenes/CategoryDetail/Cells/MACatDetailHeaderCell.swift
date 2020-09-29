@@ -37,8 +37,10 @@ final class MACatDetailHeaderCell: UICollectionViewCell {
     }
 
     private func installConstraints() {
+        snp.makeConstraints({ $0.width.equalTo(UIScreen.main.bounds.width - 48) })
+
         descriptionLabel.snp.makeConstraints {
-            $0.edges.equalToSuperview().inset(UIEdgeInsets(top: 24, left: 24, bottom: 24, right: 24))
+            $0.edges.equalToSuperview()
         }
     }
 

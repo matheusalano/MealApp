@@ -61,6 +61,7 @@
 		17D145CA2523DB7000D00A58 /* MACatDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D145C92523DB7000D00A58 /* MACatDetailView.swift */; };
 		17D145CF2523DDF800D00A58 /* MACatDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D145CE2523DDF800D00A58 /* MACatDetailViewController.swift */; };
 		17D145D42523E0B500D00A58 /* MACatDetailViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D145D32523E0B500D00A58 /* MACatDetailViewControllerTests.swift */; };
+		17D145DC2523EC8300D00A58 /* MACatDetailCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D145DB2523EC8300D00A58 /* MACatDetailCoordinatorTests.swift */; };
 		17F0E6AA2509C1E000655B6A /* MealAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F0E6A92509C1E000655B6A /* MealAppUITests.swift */; };
 		7116C6CC4119312FB05A8560 /* Pods_MealAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E18342CA51D225396CFE902F /* Pods_MealAppTests.framework */; };
 		A408B5877037B0C612919FAB /* Pods_MealApp_MealAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13D930F3EC491CBB431643DC /* Pods_MealApp_MealAppUITests.framework */; };
@@ -146,6 +147,7 @@
 		17D145C92523DB7000D00A58 /* MACatDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MACatDetailView.swift; sourceTree = "<group>"; };
 		17D145CE2523DDF800D00A58 /* MACatDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MACatDetailViewController.swift; sourceTree = "<group>"; };
 		17D145D32523E0B500D00A58 /* MACatDetailViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MACatDetailViewControllerTests.swift; sourceTree = "<group>"; };
+		17D145DB2523EC8300D00A58 /* MACatDetailCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MACatDetailCoordinatorTests.swift; sourceTree = "<group>"; };
 		17F0E6A92509C1E000655B6A /* MealAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealAppUITests.swift; sourceTree = "<group>"; };
 		3A15CDF2F838086347CCAA09 /* Pods-MealAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MealAppTests.debug.xcconfig"; path = "Target Support Files/Pods-MealAppTests/Pods-MealAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		42E5F5C0DF6D1CFB3D0BCE22 /* Pods-MealApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MealApp.release.xcconfig"; path = "Target Support Files/Pods-MealApp/Pods-MealApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -440,6 +442,7 @@
 		17D1458E2523B4C200D00A58 /* CategoryDetail */ = {
 			isa = PBXGroup;
 			children = (
+				17D145DB2523EC8300D00A58 /* MACatDetailCoordinatorTests.swift */,
 				17D1458F2523B4D300D00A58 /* MACatDetailServiceTests.swift */,
 				17D145B22523BBC700D00A58 /* MACatDetailViewModelTests.swift */,
 				17D145D32523E0B500D00A58 /* MACatDetailViewControllerTests.swift */,
@@ -813,6 +816,7 @@
 				17D145D42523E0B500D00A58 /* MACatDetailViewControllerTests.swift in Sources */,
 				17380922250B13D500A2242E /* MACategoriesCoordinatorTests.swift in Sources */,
 				17380920250B0F3100A2242E /* AuxiliarEnums.swift in Sources */,
+				17D145DC2523EC8300D00A58 /* MACatDetailCoordinatorTests.swift in Sources */,
 				17D145902523B4D300D00A58 /* MACatDetailServiceTests.swift in Sources */,
 				172222E72511951E007BDF43 /* MACategoriesViewControllerTests.swift in Sources */,
 				17A48AB52509B67D00FB16D0 /* MACategoriesServiceTests.swift in Sources */,

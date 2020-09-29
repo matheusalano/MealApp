@@ -81,6 +81,10 @@ final class MACategoriesViewController: BaseViewController<MACategoriesView> {
             .bind(to: viewModel.didTapLeftBarButton)
             .disposed(by: disposeBag)
 
+        customView.collectionView.rx.itemSelected
+            .bind(to: viewModel.didSelectCell)
+            .disposed(by: disposeBag)
+
         customView.refreshControl.rx.controlEvent(.valueChanged)
             .bind(to: viewModel.loadData)
             .disposed(by: disposeBag)

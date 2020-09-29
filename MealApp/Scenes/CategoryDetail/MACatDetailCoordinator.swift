@@ -15,7 +15,11 @@ final class MACatDetailCoordinator: BaseCoordinator<Void> {
     }
 
     override func start() -> Observable<Void> {
-        return Observable.never()
+        let viewController = MACatDetailViewController(viewModel: viewModel)
+
+        navigator.navigate(to: viewController, using: .push)
+
+        return viewController.rx.deallocated
     }
 }
 

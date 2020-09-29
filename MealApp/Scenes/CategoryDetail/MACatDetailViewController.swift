@@ -37,7 +37,7 @@ final class MACatDetailViewController: BaseViewController<MACatDetailView> {
     }
 
     private func setupBindings() {
-//        customView.collectionView.rx.setDelegate(self).disposed(by: disposeBag)
+        customView.collectionView.rx.setDelegate(self).disposed(by: disposeBag)
 
         //MARK: Outputs
 
@@ -95,21 +95,13 @@ final class MACatDetailViewController: BaseViewController<MACatDetailView> {
     }
 }
 
-//extension MACatDetailViewController: UICollectionViewDelegateFlowLayout {
-//    func collectionView(_ collectionView: UICollectionView, layout _: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        let screenWidth = UIScreen.main.fixedCoordinateSpace.bounds.width
-//        let categoriesWidth = (screenWidth - 64) / 2
-//        let categoriesSize = CGSize(width: categoriesWidth, height: categoriesWidth * 0.65)
-//
-//        guard collectionView.numberOfSections == 2 else {
-//            return categoriesSize
-//        }
-//
-//        if indexPath.section == 0 {
-//            let mealWidth = screenWidth - 48
-//            return CGSize(width: mealWidth, height: mealWidth / 2)
-//        } else {
-//            return categoriesSize
-//        }
-//    }
-//}
+extension MACatDetailViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_: UICollectionView, layout _: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        if indexPath.section == 0 {
+            return CGSize(width: UIScreen.main.bounds.width - 48, height: 10)
+        } else {
+            let mealWidth = UIScreen.main.fixedCoordinateSpace.bounds.width - 48
+            return CGSize(width: mealWidth, height: mealWidth / 2)
+        }
+    }
+}
