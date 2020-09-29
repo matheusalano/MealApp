@@ -6,7 +6,7 @@ struct MACategoriesResponse: Decodable, Equatable {
 }
 
 struct MACategoriesMealResponse: Decodable, Equatable {
-    let meals: [MAMeal]
+    let meals: [MAMealBasic]
 }
 
 enum MACategorySectionModel: Equatable {
@@ -15,7 +15,7 @@ enum MACategorySectionModel: Equatable {
 }
 
 enum MACategorySectionItem: Equatable {
-    case meal(MAMeal)
+    case meal(MAMealBasic)
     case category(MACategory)
 }
 

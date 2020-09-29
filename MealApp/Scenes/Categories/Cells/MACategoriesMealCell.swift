@@ -103,7 +103,7 @@ final class MACategoriesMealCell: UICollectionViewCell {
 
     //MARK: Internal functions
 
-    func configure(with meal: MAMeal) {
+    func configure(with meal: MAMealBasic) {
         title.text = meal.name
 
         disposeBag = DisposeBag()

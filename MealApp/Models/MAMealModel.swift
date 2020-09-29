@@ -1,5 +1,23 @@
 import Foundation
 
+struct MAMealBasic: Decodable, Equatable, Identifiable {
+    let id: String
+    let name: String
+    let category: String
+    let area: String
+    let thumbURL: URL
+}
+
+extension MAMealBasic {
+    enum CodingKeys: String, CodingKey {
+        case id = "idMeal"
+        case name = "strMeal"
+        case category = "strCategory"
+        case area = "strArea"
+        case thumbURL = "strMealThumb"
+    }
+}
+
 struct MAMeal: Decodable, Equatable, Identifiable {
     struct Ingredient: Decodable, Equatable {
         let name: String
