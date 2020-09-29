@@ -56,6 +56,8 @@
 		17D145982523B71B00D00A58 /* MACatDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D145972523B71B00D00A58 /* MACatDetailViewModel.swift */; };
 		17D145AE2523B78000D00A58 /* MACatDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D145AD2523B78000D00A58 /* MACatDetailCoordinator.swift */; };
 		17D145B32523BBC700D00A58 /* MACatDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D145B22523BBC700D00A58 /* MACatDetailViewModelTests.swift */; };
+		17D145BA2523BED000D00A58 /* MACatDetailHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D145B92523BED000D00A58 /* MACatDetailHeaderCell.swift */; };
+		17D145C22523C05600D00A58 /* MACatDetailMealCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D145C12523C05600D00A58 /* MACatDetailMealCell.swift */; };
 		17F0E6AA2509C1E000655B6A /* MealAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F0E6A92509C1E000655B6A /* MealAppUITests.swift */; };
 		7116C6CC4119312FB05A8560 /* Pods_MealAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E18342CA51D225396CFE902F /* Pods_MealAppTests.framework */; };
 		A408B5877037B0C612919FAB /* Pods_MealApp_MealAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13D930F3EC491CBB431643DC /* Pods_MealApp_MealAppUITests.framework */; };
@@ -136,6 +138,8 @@
 		17D145972523B71B00D00A58 /* MACatDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MACatDetailViewModel.swift; sourceTree = "<group>"; };
 		17D145AD2523B78000D00A58 /* MACatDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MACatDetailCoordinator.swift; sourceTree = "<group>"; };
 		17D145B22523BBC700D00A58 /* MACatDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MACatDetailViewModelTests.swift; sourceTree = "<group>"; };
+		17D145B92523BED000D00A58 /* MACatDetailHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MACatDetailHeaderCell.swift; sourceTree = "<group>"; };
+		17D145C12523C05600D00A58 /* MACatDetailMealCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MACatDetailMealCell.swift; sourceTree = "<group>"; };
 		17F0E6A92509C1E000655B6A /* MealAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealAppUITests.swift; sourceTree = "<group>"; };
 		3A15CDF2F838086347CCAA09 /* Pods-MealAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MealAppTests.debug.xcconfig"; path = "Target Support Files/Pods-MealAppTests/Pods-MealAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		42E5F5C0DF6D1CFB3D0BCE22 /* Pods-MealApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MealApp.release.xcconfig"; path = "Target Support Files/Pods-MealApp/Pods-MealApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -416,6 +420,7 @@
 		17D145832523B09A00D00A58 /* CategoryDetail */ = {
 			isa = PBXGroup;
 			children = (
+				17D145B82523BE4200D00A58 /* Cells */,
 				17D145842523B0B900D00A58 /* MACatDetailService.swift */,
 				17D145892523B2F700D00A58 /* MACatDetailModel.swift */,
 				17D145972523B71B00D00A58 /* MACatDetailViewModel.swift */,
@@ -431,6 +436,15 @@
 				17D145B22523BBC700D00A58 /* MACatDetailViewModelTests.swift */,
 			);
 			path = CategoryDetail;
+			sourceTree = "<group>";
+		};
+		17D145B82523BE4200D00A58 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				17D145B92523BED000D00A58 /* MACatDetailHeaderCell.swift */,
+				17D145C12523C05600D00A58 /* MACatDetailMealCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		333F6C52436690D372251447 /* Pods */ = {
@@ -748,6 +762,7 @@
 				17B3D10125059A6B000DB66F /* AppCoordinator.swift in Sources */,
 				17D145852523B0B900D00A58 /* MACatDetailService.swift in Sources */,
 				17B3D0FC25058CBF000DB66F /* MAString.swift in Sources */,
+				17D145C22523C05600D00A58 /* MACatDetailMealCell.swift in Sources */,
 				172534372517FF970094B166 /* MANeumorphicView.swift in Sources */,
 				17B3D0F825058BC7000DB66F /* MACategoriesView.swift in Sources */,
 				17B3D0F42505879D000DB66F /* MACategoriesCoordinator.swift in Sources */,
@@ -760,6 +775,7 @@
 				17D145982523B71B00D00A58 /* MACatDetailViewModel.swift in Sources */,
 				17B3D0EB25058628000DB66F /* MANavigationController.swift in Sources */,
 				17B3D0EE25058664000DB66F /* AppNavigator.swift in Sources */,
+				17D145BA2523BED000D00A58 /* MACatDetailHeaderCell.swift in Sources */,
 				179664E22506F36700CFA3E9 /* MAFilterViewModel.swift in Sources */,
 				17C7559325057B3D00D9AB36 /* AppDelegate.swift in Sources */,
 				17B3D0F6250587B4000DB66F /* BaseViewController.swift in Sources */,
