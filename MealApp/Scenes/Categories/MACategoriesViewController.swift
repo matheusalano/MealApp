@@ -37,6 +37,7 @@ final class MACategoriesViewController: BaseViewController<MACategoriesView> {
         title = .localized(by: MAString.Scenes.Categories.title)
 
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "gear"), style: .plain, target: self, action: nil)
+        navigationItem.largeTitleDisplayMode = .never
     }
 
     private func setupTabBar() {
@@ -53,18 +54,19 @@ final class MACategoriesViewController: BaseViewController<MACategoriesView> {
         //MARK: Outputs
 
         viewModel.state
-            .do(onSubscribe: { [weak self] in self?.customView.collectionView.isHidden = true })
             .drive(onNext: { [weak self] state in
                 guard let self = self else { return }
 
                 switch state {
                 case .loading:
+                    if !self.customView.refreshControl.isRefreshing { self.customView.refreshControl.beginRefreshing() }
                     self.customView.errorView.removeFromSuperview()
                 case let .error(error):
+                    self.customView.refreshControl.endRefreshing()
                     self.customView.errorView.title = error
                     self.customView.errorView.insert(onto: self.customView)
                 case .data:
-                    self.customView.collectionView.isHidden = false
+                    self.customView.refreshControl.endRefreshing()
                 }
             })
             .disposed(by: disposeBag)
@@ -77,6 +79,10 @@ final class MACategoriesViewController: BaseViewController<MACategoriesView> {
 
         navigationItem.leftBarButtonItem?.rx.tap
             .bind(to: viewModel.didTapLeftBarButton)
+            .disposed(by: disposeBag)
+
+        customView.refreshControl.rx.controlEvent(.valueChanged)
+            .bind(to: viewModel.loadData)
             .disposed(by: disposeBag)
 
         customView.errorView.retryTap

@@ -22,6 +22,11 @@ final class MACategoriesView: UIView {
         return cv
     }()
 
+    let refreshControl: UIRefreshControl = {
+        $0.attributedTitle = NSAttributedString(string: .localized(by: MAString.General.loading))
+        return $0
+    }(UIRefreshControl())
+
     //MARK: Initializers
 
     override init(frame: CGRect) {
@@ -39,6 +44,7 @@ final class MACategoriesView: UIView {
     //MARK: Private functions
 
     private func addSubviews() {
+        collectionView.refreshControl = refreshControl
         addSubview(collectionView)
     }
 

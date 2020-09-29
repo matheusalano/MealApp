@@ -26,5 +26,11 @@ struct MAString {
         private init() {}
     }
 
+    struct General {
+        static let loading = "general_loading"
+
+        private init() {}
+    }
+
     private init() {}
 }
