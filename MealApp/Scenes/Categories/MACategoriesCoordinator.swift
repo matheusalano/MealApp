@@ -1,5 +1,4 @@
 import RxSwift
-import UIKit
 
 final class MACategoriesCoordinator: BaseCoordinator<Void> {
     let viewModel: MACategoriesViewModelProtocol

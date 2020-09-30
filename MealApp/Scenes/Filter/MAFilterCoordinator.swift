@@ -1,5 +1,4 @@
 import RxSwift
-import UIKit
 
 final class MAFilterCoordinator: BaseCoordinator<Void> {
     let viewModel: MAFilterViewModelProtocol

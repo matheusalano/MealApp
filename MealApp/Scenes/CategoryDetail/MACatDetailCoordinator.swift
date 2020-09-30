@@ -1,5 +1,4 @@
 import RxSwift
-import UIKit
 
 final class MACatDetailCoordinator: BaseCoordinator<Void> {
     let viewModel: MACatDetailViewModelProtocol
