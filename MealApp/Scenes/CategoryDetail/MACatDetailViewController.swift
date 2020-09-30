@@ -69,6 +69,10 @@ final class MACatDetailViewController: BaseViewController<MACatDetailView> {
 
         //MARK: Inputs
 
+        customView.collectionView.rx.itemSelected
+            .bind(to: viewModel.didSelectCell)
+            .disposed(by: disposeBag)
+
         customView.refreshControl.rx.controlEvent(.valueChanged)
             .bind(to: viewModel.loadData)
             .disposed(by: disposeBag)

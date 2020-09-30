@@ -43,6 +43,7 @@ final class MACatDetailViewControllerTests: QuickSpec {
 
 private final class MACatDetailViewModelMock: MACatDetailViewModelProtocol {
     let loadData = PublishSubject<Void>()
+    let didSelectCell = PublishSubject<IndexPath>()
 
     let title = Driver.just("category title")
     let navigationTarget: Driver<Target> = .never()

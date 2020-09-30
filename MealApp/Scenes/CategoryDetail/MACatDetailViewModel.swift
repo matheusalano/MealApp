@@ -10,6 +10,7 @@ protocol MACatDetailViewModelProtocol {
     typealias Target = MACatDetailCoordinator.Target
 
     var loadData: PublishSubject<Void> { get }
+    var didSelectCell: PublishSubject<IndexPath> { get }
 
     var title: Driver<String> { get }
     var navigationTarget: Driver<Target> { get }
@@ -21,6 +22,7 @@ final class MACatDetailViewModel: MACatDetailViewModelProtocol {
     //MARK: Inputs
 
     let loadData = PublishSubject<Void>()
+    let didSelectCell = PublishSubject<IndexPath>()
 
     //MARK: Outputs
 
@@ -58,7 +60,18 @@ final class MACatDetailViewModel: MACatDetailViewModelProtocol {
             resultSelector: { $0 + $1 }
         )
 
-        navigationTarget = Observable.merge(
-        ).asDriver(onErrorDriveWith: .never())
+        let selectedMeal = didSelectCell
+            .filter({ $0.section == 1 })
+            .withLatestFrom(dataSource) { (indexPath, data) -> MAMealBasic? in
+                switch data[indexPath.section].items[indexPath.row] {
+                case let .meal(meal):
+                    return meal
+                case .header(_):
+                    return nil
+                }
+            }
+            .compactMap({ $0 })
+
+        navigationTarget = selectedMeal.map({ .mealDetail(meal: $0) }).asDriver(onErrorDriveWith: .never())
     }
 }

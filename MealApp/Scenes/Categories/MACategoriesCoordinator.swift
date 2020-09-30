@@ -4,15 +4,17 @@ final class MACategoriesCoordinator: BaseCoordinator<Void> {
     let viewModel: MACategoriesViewModelProtocol
 
     var categoryDetailCoordinator: BaseCoordinator<Void>?
+    var mealDetailCoordinator: BaseCoordinator<Void>?
 
     override init(navigator: AppNavigator) {
         viewModel = MACategoriesViewModel()
         super.init(navigator: navigator)
     }
 
-    init(navigator: AppNavigator, viewModel: MACategoriesViewModelProtocol, categoryDetailCoordinator: BaseCoordinator<Void>) {
+    init(navigator: AppNavigator, viewModel: MACategoriesViewModelProtocol, categoryDetailCoordinator: BaseCoordinator<Void>, mealDetailCoordinator: BaseCoordinator<Void>) {
         self.viewModel = viewModel
         self.categoryDetailCoordinator = categoryDetailCoordinator
+        self.mealDetailCoordinator = mealDetailCoordinator
         super.init(navigator: navigator)
     }
 
@@ -28,8 +30,7 @@ final class MACategoriesCoordinator: BaseCoordinator<Void> {
                 case let .detail(category):
                     self?.startCategoryDetail(category: category)
                 case let .mealDetail(meal: meal):
-                    //TODO: Go to Meal
-                    break
+                    self?.startMealDetail(meal: meal)
                 }
             })
             .disposed(by: disposeBag)
@@ -40,6 +41,12 @@ final class MACategoriesCoordinator: BaseCoordinator<Void> {
 
     private func startCategoryDetail(category: MACategory) {
         coordinate(to: categoryDetailCoordinator ?? MACatDetailCoordinator(navigator: navigator, category: category))
+            .subscribe()
+            .disposed(by: disposeBag)
+    }
+
+    private func startMealDetail(meal: MAMealBasic) {
+        coordinate(to: mealDetailCoordinator ?? MAMealDetailCoordinator(navigator: navigator, meal: meal))
             .subscribe()
             .disposed(by: disposeBag)
     }
