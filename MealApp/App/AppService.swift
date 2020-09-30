@@ -11,6 +11,7 @@ enum APIPaths: String, Equatable {
     case categories = "categories.php"
     case random = "random.php"
     case filter = "filter.php"
+    case lookup = "lookup.php"
 }
 
 protocol AppServiceProtocol {

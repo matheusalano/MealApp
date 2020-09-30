@@ -31,3 +31,7 @@ extension MACategoriesMealResponse {
 extension MACatDetailResponse {
     static let dummy = MACatDetailResponse(meals: [.dummy])
 }
+
+extension MAMealDetailResponse {
+    static let dummy = MAMealDetailResponse(meals: [.dummy])
+}

@@ -1,3 +1,5 @@
 import Foundation
 
-struct MAMealDetailResponse: Decodable, Equatable {}
+struct MAMealDetailResponse: Decodable, Equatable {
+    let meals: [MAMeal]
+}

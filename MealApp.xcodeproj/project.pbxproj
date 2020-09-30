@@ -13,6 +13,7 @@
 		171C88EE2525292E009B22A1 /* MAMealDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171C88E82525292E009B22A1 /* MAMealDetailModel.swift */; };
 		171C88EF2525292E009B22A1 /* MAMealDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171C88E92525292E009B22A1 /* MAMealDetailViewModel.swift */; };
 		171C88F02525292E009B22A1 /* MAMealDetailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171C88EA2525292E009B22A1 /* MAMealDetailService.swift */; };
+		171C88F925253722009B22A1 /* MAMealDetailServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171C88F825253721009B22A1 /* MAMealDetailServiceTests.swift */; };
 		1720BBE52506FEBC00C332CE /* MAFilterViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1720BBE42506FEBC00C332CE /* MAFilterViewModelTests.swift */; };
 		172222E72511951E007BDF43 /* MACategoriesViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172222E62511951E007BDF43 /* MACategoriesViewControllerTests.swift */; };
 		172534372517FF970094B166 /* MANeumorphicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172534362517FF970094B166 /* MANeumorphicView.swift */; };
@@ -99,6 +100,7 @@
 		171C88E82525292E009B22A1 /* MAMealDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAMealDetailModel.swift; sourceTree = "<group>"; };
 		171C88E92525292E009B22A1 /* MAMealDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAMealDetailViewModel.swift; sourceTree = "<group>"; };
 		171C88EA2525292E009B22A1 /* MAMealDetailService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAMealDetailService.swift; sourceTree = "<group>"; };
+		171C88F825253721009B22A1 /* MAMealDetailServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAMealDetailServiceTests.swift; sourceTree = "<group>"; };
 		1720BBE42506FEBC00C332CE /* MAFilterViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAFilterViewModelTests.swift; sourceTree = "<group>"; };
 		172222E62511951E007BDF43 /* MACategoriesViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MACategoriesViewControllerTests.swift; sourceTree = "<group>"; };
 		172534362517FF970094B166 /* MANeumorphicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MANeumorphicView.swift; sourceTree = "<group>"; };
@@ -222,6 +224,14 @@
 			path = MealDetail;
 			sourceTree = "<group>";
 		};
+		171C88F72525370D009B22A1 /* MealDetail */ = {
+			isa = PBXGroup;
+			children = (
+				171C88F825253721009B22A1 /* MAMealDetailServiceTests.swift */,
+			);
+			path = MealDetail;
+			sourceTree = "<group>";
+		};
 		1720BBE32506FEAC00C332CE /* Filter */ = {
 			isa = PBXGroup;
 			children = (
@@ -260,9 +270,10 @@
 		175C6B052506CBBA0041832D /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				175C6B062506CBBE0041832D /* Categories */,
 				17D1458E2523B4C200D00A58 /* CategoryDetail */,
 				1720BBE32506FEAC00C332CE /* Filter */,
-				175C6B062506CBBE0041832D /* Categories */,
+				171C88F72525370D009B22A1 /* MealDetail */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -860,6 +871,7 @@
 				17A48AB32509B5FB00FB16D0 /* MACategoryDummies.swift in Sources */,
 				175C6B0A2506CC260041832D /* QuickSpec+BDT.swift in Sources */,
 				17A48AB82509BA1E00FB16D0 /* AppServiceMock.swift in Sources */,
+				171C88F925253722009B22A1 /* MAMealDetailServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
