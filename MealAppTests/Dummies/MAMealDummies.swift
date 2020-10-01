@@ -20,7 +20,7 @@ extension MAMeal {
         area: "test_area",
         instructions: "test_inst",
         thumbURL: URL(string: "test_thumb")!,
-        ingredients: []
+        ingredients: [.init(name: "test_ing_name", measure: "test_ing_meas")]
     )
 }
 
