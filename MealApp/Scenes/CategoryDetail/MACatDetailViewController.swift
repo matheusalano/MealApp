@@ -37,8 +37,6 @@ final class MACatDetailViewController: BaseViewController<MACatDetailView> {
     }
 
     private func setupBindings() {
-        customView.collectionView.rx.setDelegate(self).disposed(by: disposeBag)
-
         //MARK: Outputs
 
         viewModel.title
@@ -96,16 +94,5 @@ final class MACatDetailViewController: BaseViewController<MACatDetailView> {
                     return cell
                 }
             })
-    }
-}
-
-extension MACatDetailViewController: UICollectionViewDelegateFlowLayout {
-    func collectionView(_: UICollectionView, layout _: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        if indexPath.section == 0 {
-            return CGSize(width: UIScreen.main.bounds.width - 48, height: 10)
-        } else {
-            let mealWidth = UIScreen.main.fixedCoordinateSpace.bounds.width - 48
-            return CGSize(width: mealWidth, height: mealWidth / 2)
-        }
     }
 }

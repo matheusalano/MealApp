@@ -12,7 +12,6 @@ final class MACatDetailHeaderCell: UICollectionViewCell {
         $0.textColor = .secondaryLabel
         $0.adjustsFontForContentSizeCategory = true
         $0.numberOfLines = 0
-        $0.setContentCompressionResistancePriority(.required, for: .vertical)
         return $0
     }(UILabel())
 
@@ -30,15 +29,20 @@ final class MACatDetailHeaderCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 
+    override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
+        let layoutAttributes = super.preferredLayoutAttributesFitting(layoutAttributes)
+        layoutIfNeeded()
+        layoutAttributes.frame.size = systemLayoutSizeFitting(UIView.layoutFittingCompressedSize, withHorizontalFittingPriority: .required, verticalFittingPriority: .fittingSizeLevel)
+        return layoutAttributes
+    }
+
     //MARK: Private functions
 
     private func addSubviews() {
-        addSubview(descriptionLabel)
+        contentView.addSubview(descriptionLabel)
     }
 
     private func installConstraints() {
-        snp.makeConstraints({ $0.width.equalTo(UIScreen.main.bounds.width - 48) })
-
         descriptionLabel.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
