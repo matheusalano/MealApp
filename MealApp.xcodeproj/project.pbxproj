@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17001B912526167E00387122 /* MAMealDetailInstructionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17001B902526167E00387122 /* MAMealDetailInstructionsView.swift */; };
+		17001B9625261FC900387122 /* MAMealDetailIngredientsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17001B9525261FC900387122 /* MAMealDetailIngredientsView.swift */; };
+		17001BAB2527E1FC00387122 /* MAMealDetailViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17001BAA2527E1FC00387122 /* MAMealDetailViewControllerTests.swift */; };
 		171C88EB2525292E009B22A1 /* MAMealDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171C88E52525292E009B22A1 /* MAMealDetailCoordinator.swift */; };
 		171C88EC2525292E009B22A1 /* MAMealDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171C88E62525292E009B22A1 /* MAMealDetailViewController.swift */; };
 		171C88ED2525292E009B22A1 /* MAMealDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171C88E72525292E009B22A1 /* MAMealDetailView.swift */; };
@@ -28,6 +31,7 @@
 		17670E0625183BD6009AF6D4 /* Nimble+Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17670E0525183BD6009AF6D4 /* Nimble+Snapshot.swift */; };
 		1777C1EB25227324002F53E3 /* MAMealDummies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1777C1EA25227324002F53E3 /* MAMealDummies.swift */; };
 		177EFF5A2525624F0080E53D /* MAMealDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177EFF592525624F0080E53D /* MAMealDetailViewModelTests.swift */; };
+		177EFF60252564790080E53D /* MAMealDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177EFF5F252564790080E53D /* MAMealDetailHeaderView.swift */; };
 		17826C3E25196F040041BE97 /* MAErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17826C3D25196F040041BE97 /* MAErrorView.swift */; };
 		178FC7352514336300122E8E /* MANeumorphicLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178FC7342514336300122E8E /* MANeumorphicLayer.swift */; };
 		179664E22506F36700CFA3E9 /* MAFilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179664E12506F36700CFA3E9 /* MAFilterViewModel.swift */; };
@@ -95,6 +99,9 @@
 
 /* Begin PBXFileReference section */
 		13D930F3EC491CBB431643DC /* Pods_MealApp_MealAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MealApp_MealAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		17001B902526167E00387122 /* MAMealDetailInstructionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAMealDetailInstructionsView.swift; sourceTree = "<group>"; };
+		17001B9525261FC900387122 /* MAMealDetailIngredientsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAMealDetailIngredientsView.swift; sourceTree = "<group>"; };
+		17001BAA2527E1FC00387122 /* MAMealDetailViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAMealDetailViewControllerTests.swift; sourceTree = "<group>"; };
 		171C88E52525292E009B22A1 /* MAMealDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAMealDetailCoordinator.swift; sourceTree = "<group>"; };
 		171C88E62525292E009B22A1 /* MAMealDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAMealDetailViewController.swift; sourceTree = "<group>"; };
 		171C88E72525292E009B22A1 /* MAMealDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAMealDetailView.swift; sourceTree = "<group>"; };
@@ -116,6 +123,7 @@
 		17670E0525183BD6009AF6D4 /* Nimble+Snapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Nimble+Snapshot.swift"; sourceTree = "<group>"; };
 		1777C1EA25227324002F53E3 /* MAMealDummies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAMealDummies.swift; sourceTree = "<group>"; };
 		177EFF592525624F0080E53D /* MAMealDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAMealDetailViewModelTests.swift; sourceTree = "<group>"; };
+		177EFF5F252564790080E53D /* MAMealDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAMealDetailHeaderView.swift; sourceTree = "<group>"; };
 		17826C3D25196F040041BE97 /* MAErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAErrorView.swift; sourceTree = "<group>"; };
 		178FC7342514336300122E8E /* MANeumorphicLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MANeumorphicLayer.swift; sourceTree = "<group>"; };
 		179664E12506F36700CFA3E9 /* MAFilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAFilterViewModel.swift; sourceTree = "<group>"; };
@@ -216,9 +224,9 @@
 		171C88E425252918009B22A1 /* MealDetail */ = {
 			isa = PBXGroup;
 			children = (
+				177EFF5E252564370080E53D /* Views */,
 				171C88E52525292E009B22A1 /* MAMealDetailCoordinator.swift */,
 				171C88E62525292E009B22A1 /* MAMealDetailViewController.swift */,
-				171C88E72525292E009B22A1 /* MAMealDetailView.swift */,
 				171C88E82525292E009B22A1 /* MAMealDetailModel.swift */,
 				171C88E92525292E009B22A1 /* MAMealDetailViewModel.swift */,
 				171C88EA2525292E009B22A1 /* MAMealDetailService.swift */,
@@ -231,6 +239,7 @@
 			children = (
 				171C88F825253721009B22A1 /* MAMealDetailServiceTests.swift */,
 				177EFF592525624F0080E53D /* MAMealDetailViewModelTests.swift */,
+				17001BAA2527E1FC00387122 /* MAMealDetailViewControllerTests.swift */,
 			);
 			path = MealDetail;
 			sourceTree = "<group>";
@@ -290,6 +299,17 @@
 				172222E62511951E007BDF43 /* MACategoriesViewControllerTests.swift */,
 			);
 			path = Categories;
+			sourceTree = "<group>";
+		};
+		177EFF5E252564370080E53D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				171C88E72525292E009B22A1 /* MAMealDetailView.swift */,
+				177EFF5F252564790080E53D /* MAMealDetailHeaderView.swift */,
+				17001B902526167E00387122 /* MAMealDetailInstructionsView.swift */,
+				17001B9525261FC900387122 /* MAMealDetailIngredientsView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		17A48AAE2509B24700FB16D0 /* Models */ = {
@@ -830,6 +850,7 @@
 				17B3D0EB25058628000DB66F /* MANavigationController.swift in Sources */,
 				17B3D0EE25058664000DB66F /* AppNavigator.swift in Sources */,
 				17D145BA2523BED000D00A58 /* MACatDetailHeaderCell.swift in Sources */,
+				177EFF60252564790080E53D /* MAMealDetailHeaderView.swift in Sources */,
 				179664E22506F36700CFA3E9 /* MAFilterViewModel.swift in Sources */,
 				17C7559325057B3D00D9AB36 /* AppDelegate.swift in Sources */,
 				17D145CF2523DDF800D00A58 /* MACatDetailViewController.swift in Sources */,
@@ -845,9 +866,11 @@
 				171C88EC2525292E009B22A1 /* MAMealDetailViewController.swift in Sources */,
 				17A48AAD2509B15900FB16D0 /* MACategoriesService.swift in Sources */,
 				17AE064B2505A5C7006A53F6 /* MAFilterViewController.swift in Sources */,
+				17001B912526167E00387122 /* MAMealDetailInstructionsView.swift in Sources */,
 				17A48AB02509B25100FB16D0 /* MACategoryModel.swift in Sources */,
 				179DCBCE251EAB8D000BE6C4 /* MAMealModel.swift in Sources */,
 				17B3D0FF25059127000DB66F /* String+Localized.swift in Sources */,
+				17001B9625261FC900387122 /* MAMealDetailIngredientsView.swift in Sources */,
 				171C88F02525292E009B22A1 /* MAMealDetailService.swift in Sources */,
 				17B3D0FA25058BF4000DB66F /* MACategoriesViewController.swift in Sources */,
 				17380927250B1DB300A2242E /* MACategoriesCell.swift in Sources */,
@@ -868,6 +891,7 @@
 				172222E72511951E007BDF43 /* MACategoriesViewControllerTests.swift in Sources */,
 				17A48AB52509B67D00FB16D0 /* MACategoriesServiceTests.swift in Sources */,
 				17380924250B13F100A2242E /* AppNavigatorSpy.swift in Sources */,
+				17001BAB2527E1FC00387122 /* MAMealDetailViewControllerTests.swift in Sources */,
 				17670E0625183BD6009AF6D4 /* Nimble+Snapshot.swift in Sources */,
 				175C6B082506CBDF0041832D /* MACategoriesViewModelTests.swift in Sources */,
 				1777C1EB25227324002F53E3 /* MAMealDummies.swift in Sources */,
