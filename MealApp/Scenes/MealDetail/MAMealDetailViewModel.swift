@@ -7,8 +7,6 @@ enum MAMealDetailViewModelState: Equatable {
 }
 
 protocol MAMealDetailViewModelProtocol {
-    typealias Target = MAMealDetailCoordinator.Target
-
     var loadData: PublishSubject<Void> { get }
 
     var state: Driver<MAMealDetailViewModelState> { get }

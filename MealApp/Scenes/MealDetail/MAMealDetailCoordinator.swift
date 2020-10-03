@@ -21,9 +21,3 @@ final class MAMealDetailCoordinator: BaseCoordinator<Void> {
         return viewController.rx.deallocated
     }
 }
-
-extension MAMealDetailCoordinator {
-    enum Target: Equatable {
-        case pop
-    }
-}
