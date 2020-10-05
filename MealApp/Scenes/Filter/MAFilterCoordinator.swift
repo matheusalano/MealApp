@@ -19,9 +19,10 @@ final class MAFilterCoordinator: BaseCoordinator<Void> {
         viewModel.navigationTarget
             .drive(onNext: { target in
                 switch target {
-                case .settings:
-                    //TODO: Go to Settings
-                    break
+                case let .mealsFromArea(area: area):
+                    print(area)
+                case let .mealsWithIngredient(ingredient: ingredient):
+                    print(ingredient)
                 }
             })
             .disposed(by: disposeBag)
@@ -33,6 +34,7 @@ final class MAFilterCoordinator: BaseCoordinator<Void> {
 
 extension MAFilterCoordinator {
     enum Target: Equatable {
-        case settings
+        case mealsFromArea(area: String)
+        case mealsWithIngredient(ingredient: String)
     }
 }

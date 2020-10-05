@@ -57,7 +57,7 @@ final class MAFilterViewControllerTests: QuickSpec {
     }
 }
 
-final class MAFilterViewModelMock: MAFilterViewModelProtocol {
+private final class MAFilterViewModelMock: MAFilterViewModelProtocol {
     private enum FilterOption {
         case area
         case ingredients

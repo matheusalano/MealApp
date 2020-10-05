@@ -26,6 +26,7 @@
 		17380924250B13F100A2242E /* AppNavigatorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17380923250B13F100A2242E /* AppNavigatorSpy.swift */; };
 		17380927250B1DB300A2242E /* MACategoriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17380926250B1DB300A2242E /* MACategoriesCell.swift */; };
 		17537B4F252A9CC800ECA15D /* MAFilterViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17537B4E252A9CC800ECA15D /* MAFilterViewControllerTests.swift */; };
+		1756F82A252BBF9E005D3073 /* MAFilterCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1756F829252BBF9E005D3073 /* MAFilterCoordinatorTests.swift */; };
 		175C6B032506C6BD0041832D /* MACategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175C6B022506C6BD0041832D /* MACategoriesViewModel.swift */; };
 		175C6B082506CBDF0041832D /* MACategoriesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175C6B072506CBDF0041832D /* MACategoriesViewModelTests.swift */; };
 		175C6B0A2506CC260041832D /* QuickSpec+BDT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175C6B092506CC260041832D /* QuickSpec+BDT.swift */; };
@@ -126,6 +127,7 @@
 		17380923250B13F100A2242E /* AppNavigatorSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigatorSpy.swift; sourceTree = "<group>"; };
 		17380926250B1DB300A2242E /* MACategoriesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MACategoriesCell.swift; sourceTree = "<group>"; };
 		17537B4E252A9CC800ECA15D /* MAFilterViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAFilterViewControllerTests.swift; sourceTree = "<group>"; };
+		1756F829252BBF9E005D3073 /* MAFilterCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAFilterCoordinatorTests.swift; sourceTree = "<group>"; };
 		175C6B022506C6BD0041832D /* MACategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MACategoriesViewModel.swift; sourceTree = "<group>"; };
 		175C6B072506CBDF0041832D /* MACategoriesViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MACategoriesViewModelTests.swift; sourceTree = "<group>"; };
 		175C6B092506CC260041832D /* QuickSpec+BDT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuickSpec+BDT.swift"; sourceTree = "<group>"; };
@@ -267,6 +269,7 @@
 				1720BBE42506FEBC00C332CE /* MAFilterViewModelTests.swift */,
 				17D84A96252A6DF700E67899 /* MAFilterServiceTests.swift */,
 				17537B4E252A9CC800ECA15D /* MAFilterViewControllerTests.swift */,
+				1756F829252BBF9E005D3073 /* MAFilterCoordinatorTests.swift */,
 			);
 			path = Filter;
 			sourceTree = "<group>";
@@ -921,6 +924,7 @@
 				175D281325290C0300CD8655 /* MAMealDetailCoordinatorTests.swift in Sources */,
 				17D145B32523BBC700D00A58 /* MACatDetailViewModelTests.swift in Sources */,
 				17D145D42523E0B500D00A58 /* MACatDetailViewControllerTests.swift in Sources */,
+				1756F82A252BBF9E005D3073 /* MAFilterCoordinatorTests.swift in Sources */,
 				17380922250B13D500A2242E /* MACategoriesCoordinatorTests.swift in Sources */,
 				17380920250B0F3100A2242E /* AuxiliarEnums.swift in Sources */,
 				17D145DC2523EC8300D00A58 /* MACatDetailCoordinatorTests.swift in Sources */,
