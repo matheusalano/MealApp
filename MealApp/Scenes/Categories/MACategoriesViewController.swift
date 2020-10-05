@@ -34,7 +34,7 @@ final class MACategoriesViewController: BaseViewController<MACategoriesView> {
     //MARK: Private functions
 
     private func setupNavigationBar() {
-        title = .localized(by: MAString.Scenes.Categories.title)
+        title = MAString.Scenes.Categories.title
 
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "gear"), style: .plain, target: self, action: nil)
         navigationItem.largeTitleDisplayMode = .never
@@ -42,7 +42,7 @@ final class MACategoriesViewController: BaseViewController<MACategoriesView> {
 
     private func setupTabBar() {
         tabBarItem = UITabBarItem(
-            title: .localized(by: MAString.Scenes.Categories.title),
+            title: MAString.Scenes.Categories.title,
             image: UIImage(systemName: "rectangle.grid.2x2"),
             selectedImage: UIImage(systemName: "rectangle.grid.2x2.fill")
         )

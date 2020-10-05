@@ -34,7 +34,7 @@ final class MAFilterViewModelTests: QuickSpec {
 
                 then("then datasource must be correct") {
                     let truth = MAFilterSectionModel.filterSection(
-                        items: [.filterOption(.init(title: "By Area", systemImage: "mappin.circle.fill", selected: false)),
+                        items: [.filterOption(.init(title: "By area", systemImage: "mappin.circle.fill", selected: false)),
                                 .filterOption(.init(title: "By main ingredient", systemImage: "i.circle.fill", selected: false))])
                     let observer = self.scheduler.start({ self.sut.dataSource.asObservable() })
                     expect(observer.events).to(equal([.next(200, [truth, .optionSection(items: [])])]))
@@ -124,7 +124,7 @@ final class MAFilterViewModelTests: QuickSpec {
 
                     then("then error must be presented") {
                         let observer = self.scheduler.start({ self.sut.state.asObservable() })
-                        expect(observer.events).to(contain([.next(300, .loading), .next(300, .error(.localized(by: MAString.Errors.generic)))]))
+                        expect(observer.events).to(contain([.next(300, .loading), .next(300, .error(MAString.Errors.generic))]))
                     }
                 }
 
@@ -138,7 +138,7 @@ final class MAFilterViewModelTests: QuickSpec {
 
                     then("then error must be presented") {
                         let observer = self.scheduler.start({ self.sut.state.asObservable() })
-                        expect(observer.events).to(contain([.next(300, .loading), .next(300, .error(.localized(by: MAString.Errors.generic)))]))
+                        expect(observer.events).to(contain([.next(300, .loading), .next(300, .error(MAString.Errors.generic))]))
                     }
                 }
             }
@@ -153,7 +153,7 @@ final class MAFilterViewModelTests: QuickSpec {
 
                 then("then datasource must be correct") {
                     let truth = MAFilterSectionModel.filterSection(
-                        items: [.filterOption(.init(title: "By Area", systemImage: "mappin.circle.fill", selected: true)),
+                        items: [.filterOption(.init(title: "By area", systemImage: "mappin.circle.fill", selected: true)),
                                 .filterOption(.init(title: "By main ingredient", systemImage: "i.circle.fill", selected: false))])
 
                     let observer = self.scheduler.start({ self.sut.dataSource.asObservable() })
@@ -173,7 +173,7 @@ final class MAFilterViewModelTests: QuickSpec {
 
                 then("then datasource must be correct") {
                     let truth = MAFilterSectionModel.filterSection(
-                        items: [.filterOption(.init(title: "By Area", systemImage: "mappin.circle.fill", selected: false)),
+                        items: [.filterOption(.init(title: "By area", systemImage: "mappin.circle.fill", selected: false)),
                                 .filterOption(.init(title: "By main ingredient", systemImage: "i.circle.fill", selected: true))])
 
                     let observer = self.scheduler.start({ self.sut.dataSource.asObservable() })

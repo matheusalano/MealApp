@@ -33,7 +33,7 @@ final class MACategoriesMealCell: UICollectionViewCell {
     private let subtitle: UILabel = {
         $0.font = UIFont.systemFont(ofSize: 16, weight: .bold)
         $0.textColor = .lightText
-        $0.text = .localized(by: MAString.Scenes.Categories.mealCellSubtitle)
+        $0.text = MAString.Scenes.Categories.mealCellSubtitle
         return $0
     }(UILabel())
 

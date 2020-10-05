@@ -23,7 +23,7 @@ final class MACategoriesView: UIView {
     }()
 
     let refreshControl: UIRefreshControl = {
-        $0.attributedTitle = NSAttributedString(string: .localized(by: MAString.General.loading))
+        $0.attributedTitle = NSAttributedString(string: MAString.General.loading)
         return $0
     }(UIRefreshControl())
 

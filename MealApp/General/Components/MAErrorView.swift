@@ -23,7 +23,7 @@ final class MAErrorView: UIView {
     private let retryButton: UIButton = {
         $0.titleLabel?.font = .preferredFont(forTextStyle: .callout)
         $0.titleLabel?.adjustsFontForContentSizeCategory = true
-        $0.setTitle("Try again", for: .normal)
+        $0.setTitle(MAString.General.tryAgain, for: .normal)
         return $0
     }(UIButton(type: .system))
 

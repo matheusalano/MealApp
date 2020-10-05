@@ -62,7 +62,7 @@ final class MACatDetailViewModelTests: QuickSpec {
 
                     then("then error must be presented") {
                         let observer = self.scheduler.start({ self.sut.state.asObservable() })
-                        expect(observer.events).to(contain([.next(300, .loading), .next(300, .error(.localized(by: MAString.Errors.generic)))]))
+                        expect(observer.events).to(contain([.next(300, .loading), .next(300, .error(MAString.Errors.generic))]))
                     }
                 }
             }

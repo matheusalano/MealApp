@@ -99,9 +99,9 @@ enum ServiceError: Error, Equatable {
     var readableMessage: String {
         switch self {
         case .noConnection:
-            return .localized(by: MAString.Errors.noConnection)
+            return MAString.Errors.noConnection
         default:
-            return .localized(by: MAString.Errors.generic)
+            return MAString.Errors.generic
         }
     }
 }

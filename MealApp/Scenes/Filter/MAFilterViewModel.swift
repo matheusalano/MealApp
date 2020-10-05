@@ -97,8 +97,8 @@ final class MAFilterViewModel: MAFilterViewModelProtocol {
         dataSource = options
             .map({ filterOption, options in
                 var sections: [MAFilterSectionModel] = [
-                    .filterSection(items: [.filterOption(.init(title: "By Area", systemImage: "mappin.circle.fill", selected: filterOption == .area)),
-                                           .filterOption(.init(title: "By main ingredient", systemImage: "i.circle.fill", selected: filterOption == .ingredients))])
+                    .filterSection(items: [.filterOption(.init(title: MAString.Scenes.Filter.byArea, systemImage: "mappin.circle.fill", selected: filterOption == .area)),
+                                           .filterOption(.init(title: MAString.Scenes.Filter.byIngredient, systemImage: "i.circle.fill", selected: filterOption == .ingredients))])
                 ]
 
                 sections.append(options)

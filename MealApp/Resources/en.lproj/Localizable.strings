@@ -2,8 +2,11 @@
 "scenes_categories_cell_subtitle" = "RANDOM MEAL";
 
 "scenes_filter_title" = "Filter";
+"scenes_filter_by_area" = "By area";
+"scenes_filter_by_ingredient" = "By main ingredient";
 
 "errors_generic" = "Oops! Something went wrong!";
 "errors_no_connection" = "The Internet connection appears to be offline.";
 
 "general_loading" = "LOADING";
+"general_try_again" = "Try again";
