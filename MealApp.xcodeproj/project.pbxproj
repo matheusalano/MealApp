@@ -28,6 +28,9 @@
 		17537B4F252A9CC800ECA15D /* MAFilterViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17537B4E252A9CC800ECA15D /* MAFilterViewControllerTests.swift */; };
 		1756F82A252BBF9E005D3073 /* MAFilterCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1756F829252BBF9E005D3073 /* MAFilterCoordinatorTests.swift */; };
 		1756F82F252BC516005D3073 /* MAMealCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1756F82E252BC516005D3073 /* MAMealCell.swift */; };
+		1756F838252BC6CD005D3073 /* MAMealListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1756F837252BC6CD005D3073 /* MAMealListService.swift */; };
+		1756F840252BC7F0005D3073 /* MAMealListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1756F83F252BC7F0005D3073 /* MAMealListModel.swift */; };
+		1756F846252BC846005D3073 /* MAMealListServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1756F845252BC846005D3073 /* MAMealListServiceTests.swift */; };
 		175C6B032506C6BD0041832D /* MACategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175C6B022506C6BD0041832D /* MACategoriesViewModel.swift */; };
 		175C6B082506CBDF0041832D /* MACategoriesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175C6B072506CBDF0041832D /* MACategoriesViewModelTests.swift */; };
 		175C6B0A2506CC260041832D /* QuickSpec+BDT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175C6B092506CC260041832D /* QuickSpec+BDT.swift */; };
@@ -129,6 +132,9 @@
 		17537B4E252A9CC800ECA15D /* MAFilterViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAFilterViewControllerTests.swift; sourceTree = "<group>"; };
 		1756F829252BBF9E005D3073 /* MAFilterCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAFilterCoordinatorTests.swift; sourceTree = "<group>"; };
 		1756F82E252BC516005D3073 /* MAMealCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAMealCell.swift; sourceTree = "<group>"; };
+		1756F837252BC6CD005D3073 /* MAMealListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAMealListService.swift; sourceTree = "<group>"; };
+		1756F83F252BC7F0005D3073 /* MAMealListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAMealListModel.swift; sourceTree = "<group>"; };
+		1756F845252BC846005D3073 /* MAMealListServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAMealListServiceTests.swift; sourceTree = "<group>"; };
 		175C6B022506C6BD0041832D /* MACategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MACategoriesViewModel.swift; sourceTree = "<group>"; };
 		175C6B072506CBDF0041832D /* MACategoriesViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MACategoriesViewModelTests.swift; sourceTree = "<group>"; };
 		175C6B092506CC260041832D /* QuickSpec+BDT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuickSpec+BDT.swift"; sourceTree = "<group>"; };
@@ -292,6 +298,23 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		1756F836252BC627005D3073 /* MealList */ = {
+			isa = PBXGroup;
+			children = (
+				1756F837252BC6CD005D3073 /* MAMealListService.swift */,
+				1756F83F252BC7F0005D3073 /* MAMealListModel.swift */,
+			);
+			path = MealList;
+			sourceTree = "<group>";
+		};
+		1756F844252BC824005D3073 /* MealList */ = {
+			isa = PBXGroup;
+			children = (
+				1756F845252BC846005D3073 /* MAMealListServiceTests.swift */,
+			);
+			path = MealList;
+			sourceTree = "<group>";
+		};
 		175C6B042506CBB30041832D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -307,6 +330,7 @@
 				175C6B062506CBBE0041832D /* Categories */,
 				17D1458E2523B4C200D00A58 /* CategoryDetail */,
 				1720BBE32506FEAC00C332CE /* Filter */,
+				1756F844252BC824005D3073 /* MealList */,
 				171C88F72525370D009B22A1 /* MealDetail */,
 			);
 			path = Scenes;
@@ -429,6 +453,7 @@
 				17B3D0F225058775000DB66F /* Categories */,
 				17D145832523B09A00D00A58 /* CategoryDetail */,
 				17AE06472505A595006A53F6 /* Filter */,
+				1756F836252BC627005D3073 /* MealList */,
 				171C88E425252918009B22A1 /* MealDetail */,
 			);
 			path = Scenes;
@@ -875,6 +900,7 @@
 				17B3D0F825058BC7000DB66F /* MACategoriesView.swift in Sources */,
 				17D145CA2523DB7000D00A58 /* MACatDetailView.swift in Sources */,
 				17B3D0F42505879D000DB66F /* MACategoriesCoordinator.swift in Sources */,
+				1756F840252BC7F0005D3073 /* MAMealListModel.swift in Sources */,
 				179DCBCB251E834B000BE6C4 /* MACategoriesMealCell.swift in Sources */,
 				171C88EE2525292E009B22A1 /* MAMealDetailModel.swift in Sources */,
 				17B3D0F025058723000DB66F /* BaseCoordinator.swift in Sources */,
@@ -882,6 +908,7 @@
 				17AE06462505A176006A53F6 /* AppService.swift in Sources */,
 				179DCBD0251EACA9000BE6C4 /* MACategoriesModel.swift in Sources */,
 				175C6B032506C6BD0041832D /* MACategoriesViewModel.swift in Sources */,
+				1756F838252BC6CD005D3073 /* MAMealListService.swift in Sources */,
 				17D145982523B71B00D00A58 /* MACatDetailViewModel.swift in Sources */,
 				1756F82F252BC516005D3073 /* MAMealCell.swift in Sources */,
 				17B3D0EB25058628000DB66F /* MANavigationController.swift in Sources */,
@@ -922,6 +949,7 @@
 			files = (
 				17537B4F252A9CC800ECA15D /* MAFilterViewControllerTests.swift in Sources */,
 				175D281325290C0300CD8655 /* MAMealDetailCoordinatorTests.swift in Sources */,
+				1756F846252BC846005D3073 /* MAMealListServiceTests.swift in Sources */,
 				17D145B32523BBC700D00A58 /* MACatDetailViewModelTests.swift in Sources */,
 				17D145D42523E0B500D00A58 /* MACatDetailViewControllerTests.swift in Sources */,
 				1756F82A252BBF9E005D3073 /* MAFilterCoordinatorTests.swift in Sources */,
