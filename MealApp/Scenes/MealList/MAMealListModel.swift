@@ -4,7 +4,7 @@ struct MAMealListResponse: Decodable, Equatable {
     let meals: [MAMealBasic]
 }
 
-enum MAMealListFilter: Equatable {
+enum MAMealListFilter: String, Equatable {
     case area
     case ingredient
 }

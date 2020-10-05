@@ -31,6 +31,8 @@
 		1756F838252BC6CD005D3073 /* MAMealListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1756F837252BC6CD005D3073 /* MAMealListService.swift */; };
 		1756F840252BC7F0005D3073 /* MAMealListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1756F83F252BC7F0005D3073 /* MAMealListModel.swift */; };
 		1756F846252BC846005D3073 /* MAMealListServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1756F845252BC846005D3073 /* MAMealListServiceTests.swift */; };
+		1756F84E252BCAB7005D3073 /* MAMealListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1756F84D252BCAB7005D3073 /* MAMealListViewModel.swift */; };
+		1756F853252BCC28005D3073 /* MAMealListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1756F852252BCC28005D3073 /* MAMealListViewModelTests.swift */; };
 		175C6B032506C6BD0041832D /* MACategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175C6B022506C6BD0041832D /* MACategoriesViewModel.swift */; };
 		175C6B082506CBDF0041832D /* MACategoriesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175C6B072506CBDF0041832D /* MACategoriesViewModelTests.swift */; };
 		175C6B0A2506CC260041832D /* QuickSpec+BDT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175C6B092506CC260041832D /* QuickSpec+BDT.swift */; };
@@ -135,6 +137,8 @@
 		1756F837252BC6CD005D3073 /* MAMealListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAMealListService.swift; sourceTree = "<group>"; };
 		1756F83F252BC7F0005D3073 /* MAMealListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAMealListModel.swift; sourceTree = "<group>"; };
 		1756F845252BC846005D3073 /* MAMealListServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAMealListServiceTests.swift; sourceTree = "<group>"; };
+		1756F84D252BCAB7005D3073 /* MAMealListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAMealListViewModel.swift; sourceTree = "<group>"; };
+		1756F852252BCC28005D3073 /* MAMealListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAMealListViewModelTests.swift; sourceTree = "<group>"; };
 		175C6B022506C6BD0041832D /* MACategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MACategoriesViewModel.swift; sourceTree = "<group>"; };
 		175C6B072506CBDF0041832D /* MACategoriesViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MACategoriesViewModelTests.swift; sourceTree = "<group>"; };
 		175C6B092506CC260041832D /* QuickSpec+BDT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuickSpec+BDT.swift"; sourceTree = "<group>"; };
@@ -303,6 +307,7 @@
 			children = (
 				1756F837252BC6CD005D3073 /* MAMealListService.swift */,
 				1756F83F252BC7F0005D3073 /* MAMealListModel.swift */,
+				1756F84D252BCAB7005D3073 /* MAMealListViewModel.swift */,
 			);
 			path = MealList;
 			sourceTree = "<group>";
@@ -311,6 +316,7 @@
 			isa = PBXGroup;
 			children = (
 				1756F845252BC846005D3073 /* MAMealListServiceTests.swift */,
+				1756F852252BCC28005D3073 /* MAMealListViewModelTests.swift */,
 			);
 			path = MealList;
 			sourceTree = "<group>";
@@ -906,6 +912,7 @@
 				17B3D0F025058723000DB66F /* BaseCoordinator.swift in Sources */,
 				178FC7352514336300122E8E /* MANeumorphicLayer.swift in Sources */,
 				17AE06462505A176006A53F6 /* AppService.swift in Sources */,
+				1756F84E252BCAB7005D3073 /* MAMealListViewModel.swift in Sources */,
 				179DCBD0251EACA9000BE6C4 /* MACategoriesModel.swift in Sources */,
 				175C6B032506C6BD0041832D /* MACategoriesViewModel.swift in Sources */,
 				1756F838252BC6CD005D3073 /* MAMealListService.swift in Sources */,
@@ -970,6 +977,7 @@
 				1720BBE52506FEBC00C332CE /* MAFilterViewModelTests.swift in Sources */,
 				17A48AB32509B5FB00FB16D0 /* MACategoryDummies.swift in Sources */,
 				175C6B0A2506CC260041832D /* QuickSpec+BDT.swift in Sources */,
+				1756F853252BCC28005D3073 /* MAMealListViewModelTests.swift in Sources */,
 				17A48AB82509BA1E00FB16D0 /* AppServiceMock.swift in Sources */,
 				171C88F925253722009B22A1 /* MAMealDetailServiceTests.swift in Sources */,
 			);
