@@ -24,9 +24,6 @@ final class MACategoriesCoordinator: BaseCoordinator<Void> {
         viewModel.navigationTarget
             .drive(onNext: { [weak self] target in
                 switch target {
-                case .settings:
-                    //TODO: Go to Settings
-                    break
                 case let .detail(category):
                     self?.startCategoryDetail(category: category)
                 case let .mealDetail(meal: meal):
@@ -56,6 +53,5 @@ extension MACategoriesCoordinator {
     enum Target: Equatable {
         case detail(category: MACategory)
         case mealDetail(meal: MAMealBasic)
-        case settings
     }
 }

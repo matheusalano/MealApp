@@ -9,7 +9,6 @@ enum MACategoriesViewModelState: Equatable {
 protocol MACategoriesViewModelProtocol {
     typealias Target = MACategoriesCoordinator.Target
 
-    var didTapLeftBarButton: PublishSubject<Void> { get }
     var didSelectCell: PublishSubject<IndexPath> { get }
     var loadData: PublishSubject<Void> { get }
 
@@ -21,7 +20,6 @@ protocol MACategoriesViewModelProtocol {
 final class MACategoriesViewModel: MACategoriesViewModelProtocol {
     //MARK: Inputs
 
-    let didTapLeftBarButton = PublishSubject<Void>()
     let didSelectCell = PublishSubject<IndexPath>()
     let loadData = PublishSubject<Void>()
 
@@ -68,18 +66,13 @@ final class MACategoriesViewModel: MACategoriesViewModelProtocol {
             Observable.combineLatest(randomMeal, categories, resultSelector: { $0 + $1 })
         ).asDriver(onErrorDriveWith: .never())
 
-        let selectedData = didSelectCell.withLatestFrom(dataSource) { (indexPath, data) -> Target in
+        navigationTarget = didSelectCell.withLatestFrom(dataSource) { (indexPath, data) -> Target in
             switch data[indexPath.section].items[indexPath.row] {
             case let .meal(meal):
                 return .mealDetail(meal: meal)
             case let .category(category):
                 return .detail(category: category)
             }
-        }
-
-        navigationTarget = Observable.merge(
-            didTapLeftBarButton.map({ .settings }),
-            selectedData
-        ).asDriver(onErrorDriveWith: .never())
+        }.asDriver(onErrorDriveWith: .never())
     }
 }

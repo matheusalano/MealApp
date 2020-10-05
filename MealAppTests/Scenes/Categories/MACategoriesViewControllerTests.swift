@@ -42,7 +42,6 @@ final class MACategoriesViewControllerTests: QuickSpec {
 }
 
 private final class MACategoriesViewModelMock: MACategoriesViewModelProtocol {
-    let didTapLeftBarButton = PublishSubject<Void>()
     let didSelectCell = PublishSubject<IndexPath>()
     let loadData = PublishSubject<Void>()
 

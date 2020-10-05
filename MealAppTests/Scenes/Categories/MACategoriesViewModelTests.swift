@@ -27,21 +27,6 @@ final class MACategoriesViewModelTests: QuickSpec {
 
     private func start() {
         describe("MACategoriesViewModel") {
-            when("when left bar button is pressed") {
-                beforeEach {
-                    self.setup()
-
-                    self.scheduler.createHotObservable([.next(300, ())])
-                        .bind(to: self.sut.didTapLeftBarButton)
-                        .disposed(by: self.disposeBag)
-                }
-
-                then("then settings scene must be requested") {
-                    let observer = self.scheduler.start({ self.sut.navigationTarget.asObservable() })
-                    expect(observer.events).to(equal([.next(300, .settings)]))
-                }
-            }
-
             when("when the data is requested") {
                 beforeEach {
                     self.setup()

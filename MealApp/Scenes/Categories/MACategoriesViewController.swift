@@ -36,7 +36,6 @@ final class MACategoriesViewController: BaseViewController<MACategoriesView> {
     private func setupNavigationBar() {
         title = MAString.Scenes.Categories.title
 
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "gear"), style: .plain, target: self, action: nil)
         navigationItem.largeTitleDisplayMode = .never
     }
 
@@ -76,10 +75,6 @@ final class MACategoriesViewController: BaseViewController<MACategoriesView> {
             .disposed(by: disposeBag)
 
         //MARK: Inputs
-
-        navigationItem.leftBarButtonItem?.rx.tap
-            .bind(to: viewModel.didTapLeftBarButton)
-            .disposed(by: disposeBag)
 
         customView.collectionView.rx.itemSelected
             .bind(to: viewModel.didSelectCell)

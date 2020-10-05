@@ -86,7 +86,6 @@ final class MACategoriesCoordinatorTests: QuickSpec {
 }
 
 private final class MACategoriesViewModelMock: MACategoriesViewModelProtocol {
-    let didTapLeftBarButton = PublishSubject<Void>()
     let didSelectCell = PublishSubject<IndexPath>()
     let loadData = PublishSubject<Void>()
 
@@ -96,7 +95,6 @@ private final class MACategoriesViewModelMock: MACategoriesViewModelProtocol {
 
     init() {
         navigationTarget = Observable.merge(
-            didTapLeftBarButton.map({ .settings }),
             didSelectCell.map({ $0.section == 0 ? .mealDetail(meal: .dummy) : .detail(category: .dummy) })
         ).asDriver(onErrorRecover: { _ in .empty() })
     }
