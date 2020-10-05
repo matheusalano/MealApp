@@ -3,13 +3,16 @@ import RxSwift
 final class MAFilterCoordinator: BaseCoordinator<Void> {
     let viewModel: MAFilterViewModelProtocol
 
+    var mealListCoordinator: BaseCoordinator<Void>?
+
     override init(navigator: AppNavigator) {
         viewModel = MAFilterViewModel()
         super.init(navigator: navigator)
     }
 
-    init(navigator: AppNavigator, viewModel: MAFilterViewModelProtocol) {
+    init(navigator: AppNavigator, viewModel: MAFilterViewModelProtocol, mealListCoordinator: BaseCoordinator<Void>) {
         self.viewModel = viewModel
+        self.mealListCoordinator = mealListCoordinator
         super.init(navigator: navigator)
     }
 
@@ -17,18 +20,24 @@ final class MAFilterCoordinator: BaseCoordinator<Void> {
         let viewController = MAFilterViewController(viewModel: viewModel)
 
         viewModel.navigationTarget
-            .drive(onNext: { target in
+            .drive(onNext: { [weak self] target in
                 switch target {
                 case let .mealsFromArea(area: area):
-                    print(area)
+                    self?.startMealList(filter: .area, value: area)
                 case let .mealsWithIngredient(ingredient: ingredient):
-                    print(ingredient)
+                    self?.startMealList(filter: .ingredient, value: ingredient)
                 }
             })
             .disposed(by: disposeBag)
 
         navigator.addTabViewController(viewController: viewController, visible: false)
         return Observable.never()
+    }
+
+    private func startMealList(filter: MAMealListFilter, value: String) {
+        coordinate(to: mealListCoordinator ?? MAMealListCoordinator(navigator: navigator, filter: filter, value: value))
+            .subscribe()
+            .disposed(by: disposeBag)
     }
 }
 

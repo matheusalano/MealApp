@@ -41,13 +41,14 @@ final class MAMealListViewControllerTests: QuickSpec {
     }
 }
 
-final class MAMealListViewModelMock: MAMealListViewModelProtocol {
+private final class MAMealListViewModelMock: MAMealListViewModelProtocol {
     let loadData = PublishSubject<Void>()
     let didSelectCell = PublishSubject<IndexPath>()
 
     let title = Driver.just("meal title")
     let dataSource: Driver<[MAMealBasic]>
     let state: Driver<MAMealListViewModelState>
+    let navigationTarget: Driver<Target> = .empty()
 
     init(result: ResultType) {
         let _state = PublishSubject<MAMealListViewModelState>()

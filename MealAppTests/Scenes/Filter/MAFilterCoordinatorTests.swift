@@ -11,6 +11,7 @@ final class MAFilterCoordinatorTests: QuickSpec {
     private var disposeBag: DisposeBag!
     private var navigator: AppNavigatorSpy!
     private var viewModel: MAFilterViewModelMock!
+    private var mealListCoordinatorMock: CoordinatorMock!
     private var sut: MAFilterCoordinator!
 
     override func spec() {
@@ -25,7 +26,8 @@ final class MAFilterCoordinatorTests: QuickSpec {
         navigator = AppNavigatorSpy()
 
         viewModel = MAFilterViewModelMock()
-        sut = MAFilterCoordinator(navigator: navigator, viewModel: viewModel)
+        mealListCoordinatorMock = CoordinatorMock(navigator: navigator)
+        sut = MAFilterCoordinator(navigator: navigator, viewModel: viewModel, mealListCoordinator: mealListCoordinatorMock)
     }
 
     private func start() {
@@ -45,6 +47,24 @@ final class MAFilterCoordinatorTests: QuickSpec {
 
                 then("then the tab is selected") {
                     expect(self.navigator.visible).to(beFalse())
+                }
+            }
+
+            when("when filter is selected") {
+                beforeEach {
+                    self.setup()
+                    self.scheduler.createHotObservable([.next(300, ())])
+                        .bind(to: self.viewModel.didSelectArea)
+                        .disposed(by: self.disposeBag)
+                    self.scheduler.createHotObservable([.next(350, ())])
+                        .bind(to: self.viewModel.didSelectIngredient)
+                        .disposed(by: self.disposeBag)
+                    self.sut.start().subscribe().disposed(by: self.disposeBag)
+                }
+
+                then("then category detail coordinator must be called") {
+                    let observer = self.scheduler.start({ self.mealListCoordinatorMock.startCalled.map({ _ in true }) })
+                    expect(observer.events).to(equal([.next(300, true), .next(350, true)]))
                 }
             }
         }
@@ -69,5 +89,14 @@ private final class MAFilterViewModelMock: MAFilterViewModelProtocol {
             didSelectArea.map({ .mealsFromArea(area: "test_area") }),
             didSelectIngredient.map({ .mealsWithIngredient(ingredient: "test_ingredient") })
         ).asDriver(onErrorRecover: { _ in .empty() })
+    }
+}
+
+private final class CoordinatorMock: BaseCoordinator<Void> {
+    let startCalled = PublishSubject<Void>()
+
+    override func start() -> Observable<Void> {
+        startCalled.onNext(())
+        return Observable.just(())
     }
 }

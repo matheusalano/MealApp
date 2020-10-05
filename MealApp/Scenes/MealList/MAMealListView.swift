@@ -54,6 +54,9 @@ private final class MAMealListFlowLayout: UICollectionViewFlowLayout {
         minimumLineSpacing = 24
         sectionInset = UIEdgeInsets(top: minimumInteritemSpacing, left: 24, bottom: minimumInteritemSpacing, right: 24)
         sectionInsetReference = .fromSafeArea
-        estimatedItemSize = UICollectionViewFlowLayout.automaticSize
+
+        let screenWidth = UIScreen.main.fixedCoordinateSpace.bounds.width
+        let cellWidth = screenWidth - 48
+        itemSize = CGSize(width: cellWidth, height: cellWidth / 2)
     }
 }
