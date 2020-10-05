@@ -9,7 +9,6 @@ enum MAFilterViewModelState: Equatable {
 protocol MAFilterViewModelProtocol {
     typealias Target = MAFilterCoordinator.Target
 
-    var didTapLeftBarButton: PublishSubject<Void> { get }
     var didSelectCell: PublishSubject<IndexPath> { get }
 
     var state: Driver<MAFilterViewModelState> { get }
@@ -20,7 +19,6 @@ protocol MAFilterViewModelProtocol {
 final class MAFilterViewModel: MAFilterViewModelProtocol {
     //MARK: Inputs
 
-    let didTapLeftBarButton = PublishSubject<Void>()
     let didSelectCell = PublishSubject<IndexPath>()
 
     //MARK: Outputs
@@ -133,7 +131,6 @@ final class MAFilterViewModel: MAFilterViewModelProtocol {
             })
 
         navigationTarget = Observable.merge(
-            didTapLeftBarButton.map({ .settings }),
             selectedArea.map({ .mealsFromArea(area: $0) }),
             selectedIngredient.map({ .mealsWithIngredient(ingredient: $0) })
         ).asDriver(onErrorRecover: { _ in .empty() })
