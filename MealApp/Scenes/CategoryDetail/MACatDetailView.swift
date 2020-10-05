@@ -7,7 +7,7 @@ final class MACatDetailView: UIView {
 
     let collectionView: UICollectionView = {
         $0.register(MACatDetailHeaderCell.self, forCellWithReuseIdentifier: MACatDetailHeaderCell.description())
-        $0.register(MACatDetailMealCell.self, forCellWithReuseIdentifier: MACatDetailMealCell.description())
+        $0.register(MAMealCell.self, forCellWithReuseIdentifier: MAMealCell.description())
         $0.contentInsetAdjustmentBehavior = .always
         $0.backgroundColor = .clear
         $0.alwaysBounceVertical = true

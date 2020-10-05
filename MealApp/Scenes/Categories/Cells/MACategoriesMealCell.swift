@@ -7,8 +7,6 @@ import UIKit
 final class MACategoriesMealCell: UICollectionViewCell {
     //MARK: Private constants
 
-    private let neumorphicView = MANeumorphicView()
-
     private let imageView: UIImageView = {
         $0.contentMode = .scaleAspectFill
         $0.clipsToBounds = true
@@ -45,7 +43,15 @@ final class MACategoriesMealCell: UICollectionViewCell {
 
     override var isHighlighted: Bool {
         didSet {
-            neumorphicView.viewDepthType = isHighlighted ? .innerShadow : .outerShadow
+            let transform = isHighlighted ? CGAffineTransform(scaleX: 0.96, y: 0.96) : .identity
+
+            UIView.animate(withDuration: 0.4,
+                           delay: 0,
+                           usingSpringWithDamping: 1.0,
+                           initialSpringVelocity: 0.0,
+                           options: [.allowUserInteraction, .beginFromCurrentState],
+                           animations: { self.transform = transform },
+                           completion: nil)
         }
     }
 
@@ -66,7 +72,6 @@ final class MACategoriesMealCell: UICollectionViewCell {
     //MARK: Private functions
 
     private func addSubviews() {
-        addSubview(neumorphicView)
         addSubview(imageView)
         addSubview(maskImageView)
         addSubview(title)
@@ -74,8 +79,6 @@ final class MACategoriesMealCell: UICollectionViewCell {
     }
 
     private func installConstraints() {
-        neumorphicView.snp.makeConstraints({ $0.edges.equalToSuperview() })
-
         imageView.snp.makeConstraints({
             $0.edges.equalToSuperview()
         })

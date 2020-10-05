@@ -4,7 +4,7 @@ import RxSwift
 import SnapKit
 import UIKit
 
-final class MACatDetailMealCell: UICollectionViewCell {
+final class MAMealCell: UICollectionViewCell {
     //MARK: Private constants
 
     private let imageView: UIImageView = {

@@ -89,7 +89,7 @@ final class MACatDetailViewController: BaseViewController<MACatDetailView> {
                     cell.configure(with: category)
                     return cell
                 case let .meal(meal):
-                    guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MACatDetailMealCell.description(), for: indexPath) as? MACatDetailMealCell else { return UICollectionViewCell() }
+                    guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MAMealCell.description(), for: indexPath) as? MAMealCell else { return UICollectionViewCell() }
                     cell.configure(with: meal)
                     return cell
                 }
