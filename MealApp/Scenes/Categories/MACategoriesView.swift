@@ -11,7 +11,6 @@ final class MACategoriesView: UIView {
         layout.minimumLineSpacing = 24
         layout.sectionInset = UIEdgeInsets(top: layout.minimumInteritemSpacing, left: 24, bottom: layout.minimumInteritemSpacing, right: 24)
         layout.sectionInsetReference = .fromSafeArea
-        layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
 
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
         cv.register(MACategoriesCell.self, forCellWithReuseIdentifier: MACategoriesCell.description())

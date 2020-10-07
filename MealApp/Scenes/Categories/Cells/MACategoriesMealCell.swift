@@ -85,12 +85,6 @@ final class MACategoriesMealCell: UICollectionViewCell {
 
         maskImageView.snp.makeConstraints({ $0.edges.equalToSuperview() })
 
-        snp.makeConstraints {
-            let screenWidth = UIScreen.main.fixedCoordinateSpace.bounds.width
-            $0.width.equalTo(screenWidth - 48)
-            $0.height.equalTo(snp.width).dividedBy(2)
-        }
-
         title.snp.makeConstraints {
             $0.leading.equalToSuperview().offset(8)
             $0.trailing.equalToSuperview().offset(-8)

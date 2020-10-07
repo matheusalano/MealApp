@@ -70,13 +70,6 @@ final class MACategoriesCell: UICollectionViewCell {
             $0.trailing.equalToSuperview().offset(-8)
         })
 
-        snp.makeConstraints {
-            let screenWidth = UIScreen.main.fixedCoordinateSpace.bounds.width
-            $0.width.equalTo((screenWidth - 64) / 2)
-            $0.width.lessThanOrEqualTo(screenWidth - 64)
-            $0.height.equalTo(snp.width).multipliedBy(0.65).priority(.high)
-        }
-
         title.snp.makeConstraints {
             $0.leading.equalToSuperview().offset(8)
             $0.trailing.equalToSuperview().offset(-8)

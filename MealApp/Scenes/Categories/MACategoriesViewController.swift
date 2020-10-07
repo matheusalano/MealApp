@@ -108,7 +108,7 @@ final class MACategoriesViewController: BaseViewController<MACategoriesView> {
 
 extension MACategoriesViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout _: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let screenWidth = UIScreen.main.fixedCoordinateSpace.bounds.width
+        let screenWidth = min(collectionView.bounds.width, 414)
         let categoriesWidth = (screenWidth - 64) / 2
         let categoriesSize = CGSize(width: categoriesWidth, height: categoriesWidth * 0.65)
 

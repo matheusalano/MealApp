@@ -50,12 +50,14 @@ private final class MAMealListFlowLayout: UICollectionViewFlowLayout {
     override func prepare() {
         super.prepare()
 
+        guard let collectionView = collectionView else { return }
+
         minimumInteritemSpacing = 16
         minimumLineSpacing = 24
         sectionInset = UIEdgeInsets(top: minimumInteritemSpacing, left: 24, bottom: minimumInteritemSpacing, right: 24)
         sectionInsetReference = .fromSafeArea
 
-        let screenWidth = UIScreen.main.fixedCoordinateSpace.bounds.width
+        let screenWidth = min(collectionView.bounds.width, 414)
         let cellWidth = screenWidth - 48
         itemSize = CGSize(width: cellWidth, height: cellWidth / 2)
     }
